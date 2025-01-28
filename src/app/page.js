@@ -1,12 +1,14 @@
 import PortfolioHeader from "./component/PortfolioHeader";
 import SkillsSection from "./component/SkillsSection";
 import ExperienceSection from "./component/ExperienceSection";
+import EducationSection from "./component/EducationSection";
 export default function Home() {
   return (
     <>
     <PortfolioHeader/>
     <SkillsSection/>
     <ExperienceSection/>
+    <EducationSection/>
     </>
   );
 }
