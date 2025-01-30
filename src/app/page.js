@@ -2,6 +2,8 @@ import PortfolioHeader from "./component/PortfolioHeader";
 import SkillsSection from "./component/SkillsSection";
 import ExperienceSection from "./component/ExperienceSection";
 import EducationSection from "./component/EducationSection";
+import ProjectSection from "./component/ProjectSection";
+import FooterSection from "./component/FooterSection";
 export default function Home() {
   return (
     <>
@@ -9,6 +11,8 @@ export default function Home() {
     <SkillsSection/>
     <ExperienceSection/>
     <EducationSection/>
+    <ProjectSection/>
+    <FooterSection/>
     </>
   );
 }
