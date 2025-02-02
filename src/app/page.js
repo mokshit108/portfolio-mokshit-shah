@@ -1,5 +1,5 @@
 import PortfolioHeader from "./component/PortfolioHeader";
-import SkillsSection from "./component/SkillsSection";
+import SkillsSection from "./component/sections/SkillsSection";
 import ExperienceSection from "./component/ExperienceSection";
 import EducationSection from "./component/EducationSection";
 import ProjectSection from "./component/ProjectSection";

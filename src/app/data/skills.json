@@ -1,0 +1,82 @@
+{
+    "skills": [
+      {
+        "title": "Reactjs",
+        "iconName": "faReact",
+        "color": "#61DAFB",
+        "type": "brand"
+      },
+      {
+        "title": "Python",
+        "iconName": "faPython",
+        "color": "#3776AB",
+        "type": "brand"
+      },
+      {
+        "title": "JavaScript",
+        "iconName": "faJs",
+        "color": "#F7DF1E",
+        "type": "brand"
+      },
+      {
+        "title": "Nodejs",
+        "iconName": "faNodeJs",
+        "color": "#339933",
+        "type": "brand"
+      },
+      {
+        "title": "Flask",
+        "iconName": "faFlask",
+        "color": "#FFFFFF",
+        "type": "solid"
+      },
+      {
+        "title": "Redux",
+        "iconName": "faBoxArchive",
+        "color": "#764ABC",
+        "type": "solid"
+      },
+      {
+        "title": "PostgreSql",
+        "iconName": "faDatabase",
+        "color": "#336791",
+        "type": "solid"
+      },
+      {
+        "title": "HTML",
+        "iconName": "faHtml5",
+        "color": "#E34F26",
+        "type": "brand"
+      },
+      {
+        "title": "CSS",
+        "iconName": "faCss3Alt",
+        "color": "#1572B6",
+        "type": "brand"
+      },
+      {
+        "title": "TailwindCSS",
+        "iconName": "faCode",
+        "color": "#38B2AC",
+        "type": "solid"
+      },
+      {
+        "title": "SQL",
+        "iconName": "faDatabase",
+        "color": "#336791",
+        "type": "solid"
+      },
+      {
+        "title": "JSON",
+        "iconName": "faFileCode",
+        "color": "#FFFFFF",
+        "type": "solid"
+      },
+      {
+        "title": "Nextjs",
+        "iconName": "faReact",
+        "color": "#FFFFFF",
+        "type": "brand"
+      }
+    ]
+  }
