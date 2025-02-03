@@ -1,9 +1,9 @@
 import PortfolioHeader from "./component/PortfolioHeader";
-import SkillsSection from "./component/sections/SkillsSection";
-import ExperienceSection from "./component/ExperienceSection";
-import EducationSection from "./component/EducationSection";
-import ProjectSection from "./component/ProjectSection";
-import FooterSection from "./component/FooterSection";
+import SkillsSection from "./component/Section";
+import ExperienceSection from "./component/Experience";
+import EducationSection from "./component/Education";
+import ProjectSection from "./component/Project";
+import FooterSection from "./component/Footer";
 export default function Home() {
   return (
     <>

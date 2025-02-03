@@ -3,7 +3,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import skillsData from '../../data/skills.json';
-import SkillCard from '../ui/SkillCard';
+import SkillCard from './SkillCard';
 
 const SkillsSection = () => {
   const { skills } = skillsData;

@@ -1,0 +1,55 @@
+{
+    "experiences": [
+      {
+        "id": 1,
+        "company": "Media.net",
+        "role": "UI Developer",
+        "period": "October 2023 - Present",
+        "description": [
+          "Developed high-performance lead generation pages, including a university listing page and specific university profiles.",
+          "Created a config-driven multi-step form for both the education and mortgage verticals, achieving higher form fill rate."
+        ],
+        "technologies": "React.js, JavaScript, React Hook Form, Zod, TailwindCSS, HTML, CSS, Vue.js",
+        "projects": [
+          {
+            "name": "Degree Programs",
+            "url": "https://collegenroll.com/degree-programs"
+          },
+          {
+            "name": "College Search",
+            "url": "https://collegenroll.com/college-search"
+          },
+          {
+            "name": "National University",
+            "url": "https://collegenroll.com/schools/national-university/"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "company": "Accenture",
+        "role": "Associate Software Engineer",
+        "period": "September 2021 - August 2023",
+        "description": [
+          "Proficiently developed and maintained engaging E-learning web applications, enhancing user experience and interactivity.",
+          "Provided comprehensive technical support for Swedamart servers, effectively resolving incidents, and optimizing server performance to ensure uninterrupted operations."
+        ],
+        "technologies": "HTML, SCSS, JavaScript"
+      }
+    ],
+    "techIcons": {
+      "React.js": { "icon": "faReact", "color": "#61DAFB" },
+      "Vue.js": { "icon": "faVuejs", "color": "#4FC08D" },
+      "JavaScript": { "icon": "faJs", "color": "#F7DF1E" },
+      "HTML": { "icon": "faHtml5", "color": "#E34F26" },
+      "CSS": { "icon": "faCss3Alt", "color": "#1572B6" },
+      "SCSS": { "icon": "faCss3Alt", "color": "#CC6699" },
+      "Node.js": { "icon": "faNode", "color": "#339933" },
+      "C++": { "icon": "faCuttlefish", "color": "#00599C" },
+      "TailwindCSS": { "icon": "faCss3Alt", "color": "#38B2AC" },
+      "Zod": { "icon": "faFileCode", "color": "#3E67B1" },
+      "Database": { "icon": "faDatabase", "color": "#336791" },
+      "API": { "icon": "faServer", "color": "#4CAF50" },
+      "default": { "icon": "faCode", "color": "#6EE7B7" }
+    }
+  }

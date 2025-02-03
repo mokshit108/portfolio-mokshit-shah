@@ -1,6 +1,9 @@
 import React from 'react';
+import portfolioData from '../data/homehero.json';
 
 const PortfolioHeader = () => {
+  const { personalInfo, backgroundImage, styles } = portfolioData;
+
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center">
       {/* Background Image - with debug styles */}
@@ -25,15 +28,15 @@ const PortfolioHeader = () => {
           {/* Left Content */}
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl font-bold text-white">
-              Mokshit Shah
+             {personalInfo.name}
             </h1>
 
             <h2 className="text-2xl text-blue-400 font-semibold">
-              Software Developer
+            {personalInfo.title}
             </h2>
 
             <p className="text-gray-300 max-w-lg">
-              Computer Science graduate from NMIMS (GPA: 3.88/4) with expertise in frontend development at AcceleratBSi, specializing in Next.js and Tailwind CSS. Passionate about building responsive, user-centric applications with a focus on enhancing application reliability and performance through effective problem-solving.
+              {personalInfo.description}
             </p>
           </div>
 
@@ -41,8 +44,8 @@ const PortfolioHeader = () => {
           <div className="flex-shrink-0">
             <div className="w-48 h-48">
               <img
-                src="https://placehold.co/200x200"
-                alt="Your Profile"
+                src={personalInfo.profileImage.src}
+                alt={personalInfo.profileImage.alt}
                 className="rounded-full object-cover shadow-lg ring-2 ring-gray-700"
               />
             </div>
