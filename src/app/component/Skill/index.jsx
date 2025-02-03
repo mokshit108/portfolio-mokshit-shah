@@ -17,7 +17,7 @@ const SkillsSection = () => {
             icon={faCode}
             className="w-8 h-8 text-blue-400"
           />
-          <h2 className="text-3xl font-bold text-white">Skills</h2>
+          <h2 className="text-5xl font-bold tracking-wide text-white font-palanquin">Skills</h2>
         </div>
 
         {/* Skills Grid */}

@@ -19,7 +19,7 @@ const ProjectSection = () => {
               className="object-contain invert"
             />
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-wide">
+          <h2 className="text-5xl font-bold tracking-wide text-white font-palanquin">
             {sectionTitle}
           </h2>
         </div>

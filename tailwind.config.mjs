@@ -11,6 +11,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        palanquin: ['var(--font-palanquin)'],
+        acme: ['var(--font-acme)'],
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
+      },
     },
   },
   plugins: [],

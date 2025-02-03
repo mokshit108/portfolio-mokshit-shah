@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { acme, inter, robotoMono, palanquin } from './font.ts'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${acme.variable} ${palanquin.variable} ${inter.variable} ${robotoMono.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

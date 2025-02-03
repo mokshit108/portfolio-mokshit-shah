@@ -13,7 +13,7 @@ const ExperienceSection = () => {
             icon={faBriefcase}
             className="text-green-400 w-8 h-8"
           />
-          <h2 className="text-3xl font-bold text-white">Experience</h2>
+          <h2 className="text-5xl font-bold text-white tracking-wide font-palanquin">Experience</h2>
         </div>
 
         <div className="relative">

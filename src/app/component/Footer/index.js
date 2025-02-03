@@ -11,7 +11,7 @@ const FooterSection = () => {
         <div className="flex flex-col items-center">
           {/* Header */}
           <div className="mb-12 text-center">
-            <h3 className="text-3xl font-bold mb-4">{header.title}</h3>
+            <h3 className="text-5xl font-bold text-white font-palanquin mb-4">{header.title}</h3>
             <p className="text-gray-400 max-w-md">
               {header.description}
             </p>

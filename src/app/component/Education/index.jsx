@@ -17,7 +17,7 @@ const EducationSection = () => {
               className="object-contain invert"
             />
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-wide">Education</h2>
+          <h2 className="text-5xl font-bold text-white font-palanquin tracking-wide">Education</h2>
         </div>
 
         <div className="space-y-6">
