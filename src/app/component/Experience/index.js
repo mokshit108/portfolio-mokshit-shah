@@ -8,7 +8,7 @@ import experienceData from '../../data/experience.json';
 const ExperienceSection = () => {
   return (
     <motion.section
-      className="py-16 bg-black min-h-screen"
+      className="py-16 bg-[#001a33] min-h-screen border-b-2 border-gray-600"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}

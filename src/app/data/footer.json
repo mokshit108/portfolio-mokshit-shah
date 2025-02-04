@@ -6,23 +6,23 @@
   "contactLinks": [
     {
       "id": 1,
-      "href": "mailto:Singhaditya3116@gmail.com",
+      "href": "mailto:mokshit108@gmail.com",
       "icon": "/api/placeholder/48/48",
-      "text": "Singhaditya3116@gmail.com",
+      "text": "mokshit108@gmail.com",
       "type": "email"
     },
     {
       "id": 2,
-      "href": "tel:+919619117437",
+      "href": "tel:+918104689015",
       "icon": "/api/placeholder/48/48",
-      "text": "+91 9619117437",
+      "text": "+91 8104689015",
       "type": "phone"
     },
     {
       "id": 3,
-      "href": "https://wa.me/+919619117437",
+      "href": "https://wa.me/+918104689015",
       "icon": "/api/placeholder/48/48",
-      "text": "WhatsApp: +91 9619117437",
+      "text": "WhatsApp: +91 8104689015",
       "type": "whatsapp"
     }
   ],

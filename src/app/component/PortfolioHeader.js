@@ -1,21 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Acme, Inter } from 'next/font/google';
+
 import portfolioData from '../data/homehero.json';
 
-// Initialize the Acme font for headings and Inter for body text
-const acmeFont = Acme({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const interFont = Inter({
-  weight: ['400', '600'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 const PortfolioHeader = () => {
   const { personalInfo, backgroundImage, styles } = portfolioData;
@@ -52,11 +40,13 @@ const PortfolioHeader = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url('https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg')`,
+          /* https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg*/
+          /*https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg*/
+          backgroundImage: `url('https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.2)',
+          filter: 'brightness(0.4)',
           zIndex: 0
         }}
       />
@@ -68,17 +58,17 @@ const PortfolioHeader = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="flex-1 space-y-6">
-            <h1 className={`text-6xl font-bold tracking-wide text-white ${acmeFont.className}`}>
+            <h1 className={`text-6xl font-bold tracking-wide text-white font-acme`}>
               {personalInfo.name}
             </h1>
 
-            <h2 className="text-3xl text-blue-400 font-semibold font-mono min-h-[40px]">
-              {displayText}
+            <h2 className="text-5xl text-sky-400 font-bold font-palanquin min-h-[40px]">
+              <span className='mr-4'>I’m</span>{displayText}
               <span className="animate-pulse">|</span>
             </h2>
 
-            <p className={`text-gray-300 text-xl font-semibold leading-relaxed ${interFont.className}`}>
-              Innovative tech architect crafting cutting-edge solutions with precision and passion. Transforming complex challenges into elegant, scalable digital experiences.
+            <p className={`text-gray-300 text-2xl font-semibold leading-relaxed`}>
+              {personalInfo.description}
             </p>
           </div>
 

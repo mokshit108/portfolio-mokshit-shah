@@ -1,55 +1,69 @@
 {
-    "experiences": [
-      {
-        "id": 1,
-        "company": "Media.net",
-        "role": "UI Developer",
-        "period": "October 2023 - Present",
-        "description": [
-          "Developed high-performance lead generation pages, including a university listing page and specific university profiles.",
-          "Created a config-driven multi-step form for both the education and mortgage verticals, achieving higher form fill rate."
-        ],
-        "technologies": "React.js, JavaScript, React Hook Form, Zod, TailwindCSS, HTML, CSS, Vue.js",
-        "projects": [
-          {
-            "name": "Degree Programs",
-            "url": "https://collegenroll.com/degree-programs"
-          },
-          {
-            "name": "College Search",
-            "url": "https://collegenroll.com/college-search"
-          },
-          {
-            "name": "National University",
-            "url": "https://collegenroll.com/schools/national-university/"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "company": "Accenture",
-        "role": "Associate Software Engineer",
-        "period": "September 2021 - August 2023",
-        "description": [
-          "Proficiently developed and maintained engaging E-learning web applications, enhancing user experience and interactivity.",
-          "Provided comprehensive technical support for Swedamart servers, effectively resolving incidents, and optimizing server performance to ensure uninterrupted operations."
-        ],
-        "technologies": "HTML, SCSS, JavaScript"
-      }
-    ],
-    "techIcons": {
-      "React.js": { "icon": "faReact", "color": "#61DAFB" },
-      "Vue.js": { "icon": "faVuejs", "color": "#4FC08D" },
-      "JavaScript": { "icon": "faJs", "color": "#F7DF1E" },
-      "HTML": { "icon": "faHtml5", "color": "#E34F26" },
-      "CSS": { "icon": "faCss3Alt", "color": "#1572B6" },
-      "SCSS": { "icon": "faCss3Alt", "color": "#CC6699" },
-      "Node.js": { "icon": "faNode", "color": "#339933" },
-      "C++": { "icon": "faCuttlefish", "color": "#00599C" },
-      "TailwindCSS": { "icon": "faCss3Alt", "color": "#38B2AC" },
-      "Zod": { "icon": "faFileCode", "color": "#3E67B1" },
-      "Database": { "icon": "faDatabase", "color": "#336791" },
-      "API": { "icon": "faServer", "color": "#4CAF50" },
-      "default": { "icon": "faCode", "color": "#6EE7B7" }
+  "experiences": [
+    {
+      "id": 1,
+      "company": "AccelerateBSi",
+      "role": "Frontend ",
+      "period": "June 2024- Present",
+      "description": [
+        "Built mobile-responsive components using Next.js and Tailwind CSS, enhancing the user interface & design of the project.",
+        "Contributed to internal projects by fixing bugs, handling errors, and gaining a deep understanding of project requirements.",
+        "Enhanced application reliability and performance through effective problem-solving."
+      ],
+      "technologies": "React.js, JavaScript, Nextjs, Saas, TailwindCSS, Jira",
+      "projects": [
+        {
+          "name": "MyCapsa",
+          "url": "https://www.mycapssa.com/"
+        },
+        {
+          "name": "Getivity",
+          "url": "https://getivity-dev.com/"
+        },
+        {
+          "name": "Filsuverz",
+          "url": "https://www.filsuvez.com/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "E-Revbay",
+      "role": "Software Developer Intern",
+      "period": "May 2023 - September 2023",
+      "description": [
+        "Business Portal - Business Tracker Platform",
+        "Created a portal for performance analysis and target management, boosting operational efficiency by 92% for finance teams.",
+        "Architected backend APIs using Node.js, Express, and ExcelJS for Excel file:conditional sheet,data validation and formulas.",
+        "API Integration: Integrated APIs for RoleMaster panel to ensure seamless interaction between the frontend and backend.",
+        "Payin Payout System - Improving Financial Workflow (Flask, Python, Mysql)",
+        "Developed bank and principal name validation logic using fuzzy-string-matching library, got 97% improvement in data accuracy.",
+        "Designed robust date picker validation logic and segregated payout data for partner-wise uploads, handling standard and exceptional cases efficiently.",
+        "Worked on the Payout part of the system and Implemented invoice generation, email triggers, email logs."
+      ],
+      "technologies": "React, NodeJs, Express, Javascript, Mysql"
+    },
+    {
+      "id": 3,
+      "company": "CBIA",
+      "role": "Application Developer Intern",
+      "period": "Jan 2022 - June 2022",
+      "description": [
+        "Text Analytics Application",
+        "Leveraged Azure Cognitive Services Text Analytics API within a C# .NET MVC framework for Analyzing text.",
+        "It features Language detection, Sentiment Analysis, Key Phrases, Entity Linking, Named Entity Recognition Functionality.",
+        "Crafted an intuitive user interface for seamless text analysis, allowing end-users to input text or analyze PDFs."
+      ],
+      "technologies": "C# Programming, Asp.net core 5, MVC Architecture, Entity Framework"
     }
-  }
+  ],
+  "techIcons": {
+    "React.js": { "icon": "faReact", "color": "#61DAFB" },
+    "JavaScript": { "icon": "faJs", "color": "#F7DF1E" },
+    "HTML": { "icon": "faHtml5", "color": "#E34F26" },
+    "CSS": { "icon": "faCss3Alt", "color": "#1572B6" },
+    "Node.js": { "icon": "faNode", "color": "#339933" },
+    "Database": { "icon": "faDatabase", "color": "#336791" },
+    "API": { "icon": "faServer", "color": "#4CAF50" },
+    "default": { "icon": "faCode", "color": "#6EE7B7" }  }
+}

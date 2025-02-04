@@ -9,7 +9,7 @@ const FooterSection = () => {
 
   return (
     <motion.footer
-      className="bg-black text-white"
+      className="bg-[#001a33] text-white"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}

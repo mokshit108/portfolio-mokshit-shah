@@ -2,27 +2,27 @@
   "educationData": [
     {
       "logo": "/images/sies-logo.png",
-      "alt": "SIES College",
-      "schoolName": "SIES Graduate School of Technology",
-      "course": "IT Engineering",
-      "grade": "CGPI: 9.11/10",
-      "date": "May 2017 - May 2021"
+      "alt": "NMIMS College",
+      "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
+      "course": "B Tech",
+      "grade": "CGPA: 3.87/4",
+      "date": "May 2021 - May 2024"
     },
     {
       "logo": "/images/ratnam-logo.png",
-      "alt": "NES Ratnam Junior College",
-      "schoolName": "NES Ratnam Junior College",
-      "course": "HSC Science",
-      "grade": "Grade: 88.40%",
-      "date": "March 2015 - March 2017"
+      "alt": "NMIMS",
+      "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
+      "course": "Diploma",
+      "grade": "CGPA: 3.9",
+      "date": "June 2018 - May 2021"
     },
     {
       "logo": "/images/guru-nanak-logo.png",
       "alt": "St Francis High School",
       "schoolName": "St Francis High School",
       "course": "SSC",
-      "grade": "Grade: 84.80%",
-      "date": "March 2015"
+      "grade": "Grade: 91.80%",
+      "date": "March 2018"
     }
   ]
 }

@@ -9,7 +9,7 @@ const EducationSection = () => {
   return (
     <motion.section
       id="education"
-      className="py-20 bg-black"
+      className="py-20 bg-[#001a33] border-b-2 border-gray-600"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}

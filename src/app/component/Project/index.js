@@ -10,7 +10,7 @@ const ProjectSection = () => {
 
   return (
     <motion.div
-      className="bg-black min-h-screen py-16 px-4"
+      className="bg-[#001a33] min-h-screen py-16 px-4 border-b-2 border-gray-600"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
