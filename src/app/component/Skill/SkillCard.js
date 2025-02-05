@@ -9,13 +9,13 @@ const SkillCard = ({ skill }) => {
   };
 
   return (
-    <div className="flex items-center gap-2 p-3 rounded-lg bg-black border border-green-950 hover:bg-gray-700 transition-all duration-300 hover:transform hover:scale-105">
+    <div className="flex justify-center items-center gap-2 p-3 rounded-lg bg-teal-500 bg-opacity-5 border-2 border-cyan-700 hover:bg-sky-700  transition-all duration-300 hover:transform hover:scale-105 ">
       <FontAwesomeIcon
         icon={getIcon(skill.iconName, skill.type)}
         className="w-5 h-5"
         style={{ color: skill.color }}
       />
-      <span className="font-bold text-white text-lg">{skill.title}</span>
+      <span className="font-bold font-sans text-center text-white text-lg">{skill.title}</span>
     </div>
   );
 };

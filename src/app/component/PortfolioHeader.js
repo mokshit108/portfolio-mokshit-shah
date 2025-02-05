@@ -46,7 +46,7 @@ const PortfolioHeader = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.4)',
+          filter: 'brightness(0.3)',
           zIndex: 0
         }}
       />

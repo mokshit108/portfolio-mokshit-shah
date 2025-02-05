@@ -3,14 +3,14 @@
     {
       "id": 1,
       "company": "AccelerateBSi",
-      "role": "Frontend ",
+      "role": "Frontend Developer",
       "period": "June 2024- Present",
       "description": [
         "Built mobile-responsive components using Next.js and Tailwind CSS, enhancing the user interface & design of the project.",
         "Contributed to internal projects by fixing bugs, handling errors, and gaining a deep understanding of project requirements.",
         "Enhanced application reliability and performance through effective problem-solving."
       ],
-      "technologies": "React.js, JavaScript, Nextjs, Saas, TailwindCSS, Jira",
+      "technologies": "React.js, JavaScript, Next.js, Saas, TailwindCSS, Jira",
       "projects": [
         {
           "name": "MyCapsa",
@@ -41,7 +41,7 @@
         "Designed robust date picker validation logic and segregated payout data for partner-wise uploads, handling standard and exceptional cases efficiently.",
         "Worked on the Payout part of the system and Implemented invoice generation, email triggers, email logs."
       ],
-      "technologies": "React, NodeJs, Express, Javascript, Mysql"
+      "technologies": "React.js, Node.js, Express, Javascript, Mysql"
     },
     {
       "id": 3,
@@ -58,12 +58,22 @@
     }
   ],
   "techIcons": {
-    "React.js": { "icon": "faReact", "color": "#61DAFB" },
-    "JavaScript": { "icon": "faJs", "color": "#F7DF1E" },
+    "React.js": { "icon": "faReact", "color": "#04a3cf" },
+    "JavaScript": { "icon": "faJs", "color": "#deaa00" },
     "HTML": { "icon": "faHtml5", "color": "#E34F26" },
     "CSS": { "icon": "faCss3Alt", "color": "#1572B6" },
     "Node.js": { "icon": "faNode", "color": "#339933" },
     "Database": { "icon": "faDatabase", "color": "#336791" },
     "API": { "icon": "faServer", "color": "#4CAF50" },
-    "default": { "icon": "faCode", "color": "#6EE7B7" }  }
+    "Next.js": { "icon": "faNext", "color": "#000000" },
+    "Saas": { "icon": "faSass", "color": "#bf4080" },
+    "Jira": { "icon": "faJira", "color": "#0052CC" },
+    "C#": { "icon": "faMicrosoft", "color": "#512BD4" },
+    "ASP.NET": { "icon": "faMicrosoft", "color": "#512BD4" },
+    "MySQL": { "icon": "faMysql", "color": "#4479A1" },
+    "Express": { "icon": "faNode", "color": "#000000" },
+    "MVC": { "icon": "faCode", "color": "#68217A" },
+    "Entity Framework": { "icon": "faDatabase", "color": "#512BD4" },
+    "default": { "icon": "faCode", "color": "#6EE7B7" }
+  }
 }
