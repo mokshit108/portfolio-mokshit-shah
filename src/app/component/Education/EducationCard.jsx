@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => (
+  <ul>
   <li>
     <div className="group flex justify-between items-center p-6 bg-gray-900 rounded-xl border border-gray-700 hover:border-[#00994d] transition-all duration-300 hover:shadow-lg hover:shadow-[#00994d]/20">
       <div className="flex gap-6">
@@ -30,6 +31,7 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => (
       </div>
     </div>
   </li>
+  </ul>
 );
 
 export default EducationCard;

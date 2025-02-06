@@ -1,7 +1,7 @@
 {
   "educationData": [
     {
-      "logo": "/images/sies-logo.png",
+      "logo": "",
       "alt": "NMIMS College",
       "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
       "course": "B Tech",
@@ -9,7 +9,7 @@
       "date": "May 2021 - May 2024"
     },
     {
-      "logo": "/images/ratnam-logo.png",
+      "logo": "",
       "alt": "NMIMS",
       "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
       "course": "Diploma",
@@ -17,7 +17,7 @@
       "date": "June 2018 - May 2021"
     },
     {
-      "logo": "/images/guru-nanak-logo.png",
+      "logo": "",
       "alt": "St Francis High School",
       "schoolName": "St Francis High School",
       "course": "SSC",
