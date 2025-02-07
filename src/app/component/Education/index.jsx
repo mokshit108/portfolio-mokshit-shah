@@ -1,7 +1,8 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import EducationCard from './EducationCard';
 import educationData from '../../data/education.json';
 
@@ -21,20 +22,14 @@ const EducationSection = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="w-12 h-12 bg-[#00994d]/20 rounded-xl p-3">
-            <Image
-              src="/icons/education.svg"
-              alt="Education"
-              width={32}
-              height={32}
-              className="object-contain invert"
-            />
-          </div>
+
+            <FontAwesomeIcon icon={faGraduationCap}  className="text-teal-500 w-12 h-12" />
+
           <h2 className="text-5xl font-bold text-white font-palanquin tracking-wide">Education</h2>
         </motion.div>
 
-        <div className="space-y-6">
-          <ul className="space-y-6">
+        <div className="space-y-4">
+          <ul className="space-y-4">
             {educationData.educationData.map((edu, index) => (
               <motion.li
                 key={index}

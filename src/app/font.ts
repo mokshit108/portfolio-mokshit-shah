@@ -1,4 +1,4 @@
-import { Acme, Inter, Roboto_Mono, Poppins ,Palanquin } from 'next/font/google';
+import { Acme, Inter, Roboto_Mono, Poppins, Palanquin } from 'next/font/google';
 
 export const acme = Acme({
   weight: '400',
@@ -20,13 +20,14 @@ export const robotoMono = Roboto_Mono({
 });
 
 export const poppins = Poppins({
-    weight: ['600', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-  });
+  weight: ['600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',  // Added missing variable
+});
 
-export  const palanquin = Palanquin({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500', '600', '700'],
-    variable: '--font-palanquin',
-  });
+export const palanquin = Palanquin({
+  subsets: ['latin', 'devanagari'],  // Added devanagari subset for better language support
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-palanquin',
+});

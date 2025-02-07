@@ -1,7 +1,9 @@
+
+
 {
   "educationData": [
     {
-      "logo": "",
+      "logo": "/icons/collegeLogo.jpg",
       "alt": "NMIMS College",
       "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
       "course": "B Tech",
@@ -9,7 +11,7 @@
       "date": "May 2021 - May 2024"
     },
     {
-      "logo": "",
+      "logo": "/icons/collegeLogo.jpg",
       "alt": "NMIMS",
       "schoolName": "NMIMS Mukesh Patel School of Technology Management and Engineering",
       "course": "Diploma",
@@ -17,11 +19,11 @@
       "date": "June 2018 - May 2021"
     },
     {
-      "logo": "",
-      "alt": "St Francis High School",
+      "logo": "/icons/schoolLogo.jpg",
+      "alt": "St Francis D'Assisi High School",
       "schoolName": "St Francis High School",
       "course": "SSC",
-      "grade": "Grade: 91.80%",
+      "grade": "PERCENTAGE: 91.80%",
       "date": "March 2018"
     }
   ]
