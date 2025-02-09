@@ -1,9 +1,10 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import ProjectCard from './ProjectCard';
 import projectsData from '../../data/projects.json';
+import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProjectSection = () => {
   const { sectionTitle, projects } = projectsData;
@@ -22,15 +23,8 @@ const ProjectSection = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="w-8 h-8">
-            <Image
-              src="/icons/education.svg"
-              alt="Education"
-              width={32}
-              height={32}
-              className="object-contain invert"
-            />
-          </div>
+          <FontAwesomeIcon icon={faFolderOpen} className="text-teal-500 w-12 h-12" />
+
           <h2 className="text-5xl font-bold tracking-wide text-white font-palanquin">
             {sectionTitle}
           </h2>

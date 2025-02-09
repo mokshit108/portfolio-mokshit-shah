@@ -1,5 +1,7 @@
 import React from 'react';
 import projectsData from '../../data/projects.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imageSrc }) => {
   const { icons } = projectsData;
@@ -45,20 +47,24 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               rel="noopener noreferrer"
               className="p-2 hover:bg-gray-800 rounded-full transition-colors"
             >
-              <svg width="24" height="24" viewBox={icons.live.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d={icons.live.path} fill="#FFF"/>
-              </svg>
+              <FontAwesomeIcon 
+                icon={faExternalLinkAlt} 
+                className="w-6 h-6 text-white"
+              />
             </a>
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 hover:bg-gray-800 rounded-full transition-colors"
-            >
-              <svg width="24" height="24" viewBox={icons.github.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d={icons.github.path} fill="#FFF"/>
-              </svg>
-            </a>
+            
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 hover:bg-gray-800 rounded-full transition-colors"
+              >
+                <svg width="24" height="24" viewBox={icons.github.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d={icons.github.path} fill="#FFF"/>
+                </svg>
+              </a>
+            )}
           </div>
         </div>
       </div>

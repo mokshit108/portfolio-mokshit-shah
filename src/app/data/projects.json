@@ -3,53 +3,41 @@
     "projects": [
       {
         "id": 1,
-        "title": "Netflix Gemini",
+        "title": "One Stop Bath",
         "description": [
-          "Developed a responsive movie recommendation platform with a Netflix-like UI, showcasing popular, trending, and now-playing movies.",
-          "Designed a secure user authentication system using Firebase as the backend to store and manage user information.",
-          "Integrated Google Gemini API to provide intelligent movie recommendations based on user input."
+          "Created a full-stack e-commerce platform featuring dynamic product management, secure user authentication, and responsive design for a seamless user experience on all devices.",
+          "Integrated Context API for efficient cart management, implemented coupon code functionality, and ensured smooth user interactions.",
+          "Developed APIs for user data handling and payment processing, and integrated Razorpay for secure transactions."
         ],
-        "techStack": ["HTML", "CSS", "JS", "React", "Tailwind", "Zod"],
-        "liveLink": "https://coldstar.netlify.app/",
-        "githubLink": "https://github.com/Singhaditya3116/Netflix",
-        "imageSrc": "/api/placeholder/400/320"
+        "techStack": ["React","Tailwind CSS","NodeJs","PostgreSql","JWT Token","Google Auth"],
+        "liveLink": "https://www.onestopbath.in/",
+        "imageSrc": "/icons/onestopbathThumbnail.png"
       },
       {
         "id": 2,
-        "title": "Youtube Clone",
+        "title": "Academic Management System (AMS)",
         "description": [
-          "This web application is a clone of YouTube, allowing users to browse and watch videos sourced from the YouTube API.",
-          "Additionally, a nested comment feature is build, fostering a community-like experience."
+          "Led development of AMS for efficient student data management.",
+          "Developed three distinct dashboards tailored for teachers, enabling seamless CRUD operations and empowering educators to efficiently manage student records.Ensured precise student classification by department and course.",
+          "Leveraged advanced technologies including C#, MVC Architecture, ASP.NET Core, and SQL Triggers to create a robust and user-friendly platform for academic administration"
         ],
-        "techStack": ["React.js", "Redux", "TailwindCSS", "Firebase"],
-        "liveLink": "https://youtubevanced.netlify.app/",
-        "githubLink": "https://github.com/Singhaditya3116/youtube",
-        "imageSrc": "/api/placeholder/400/320"
+        "techStack": ["C#", "MVC", "ASP.NET Core", "SQL Triggers"],
+        "githubLink": "https://github.com/mokshit108/SMA-Student-Management-Application",
+        "imageSrc": "/icons/AcademicsprojectThumbnail.png"
       },
       {
         "id": 3,
-        "title": "Swiggy Clone",
+        "title": "Portfolio Website",
         "description": [
-          "This web application showcases the complete menu of a restaurant, allowing users to browse through all available products.",
-          "Customers can easily add their selected items to a cart."
+          "Conceptualized and implemented a dynamic portfolio website showcasing my skills, projects, and achievements in a visually engaging and user-friendly format."
+
         ],
-        "techStack": ["React.js", "Redux", "CSS"],
-        "liveLink": "https://twiggy-food-order.netlify.app/",
-        "githubLink": "https://github.com/Singhaditya3116/Twiggy-Food-Order-App",
-        "imageSrc": "/api/placeholder/400/320"
-      },
-      {
-        "id": 3,
-        "title": "Swiggy Clone",
-        "description": [
-          "This web application showcases the complete menu of a restaurant, allowing users to browse through all available products.",
-          "Customers can easily add their selected items to a cart."
-        ],
-        "techStack": ["React.js", "Redux", "CSS"],
-        "liveLink": "https://twiggy-food-order.netlify.app/",
-        "githubLink": "https://github.com/Singhaditya3116/Twiggy-Food-Order-App",
-        "imageSrc": "/api/placeholder/400/320"
+        "techStack": ["React", "Html", "CSS", "JavaScript"],
+        "liveLink": "https://mokshit-shah-portfolio.vercel.app/",
+        "githubLink": "https://github.com/mokshit108/portfolio",
+        "imageSrc": "/icons/portfolioThumbnail.png"
       }
+      
     ],
     "icons": {
       "live": {
