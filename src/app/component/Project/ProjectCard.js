@@ -7,7 +7,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
   const { icons } = projectsData;
 
   return (
-    <div className="bg-black border border-[#4CAF50] rounded-lg overflow-hidden hover:scale-[1.02] transition-transform">
+    <div className="bg-black border border-teal-500/50 rounded-lg overflow-hidden hover:scale-[1.02] transition-transform hover:border-teal-300 duration-300 hover:shadow-lg hover:shadow-teal-500/10">
       <div className="relative h-48 w-full">
         <img
           src={imageSrc}
