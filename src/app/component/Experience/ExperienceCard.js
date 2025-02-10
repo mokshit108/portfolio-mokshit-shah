@@ -81,7 +81,7 @@ const ExperienceCard = ({
               <p key={index} className="flex gap-3 items-start group">
                 <FontAwesomeIcon
                   icon={faCaretRight}
-                  className="text-green-400 w-4 h-4 mt-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                  className="text-teal-500 w-4 h-4 mt-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 />
                 {item}
               </p>
@@ -106,7 +106,7 @@ const ExperienceCard = ({
                     return (
                       <span
                         key={index}
-                        className="px-3 py-1.5 bg-slate-50 border-2 border-cyan-700 rounded-lg text-sm flex items-center gap-2 hover:bg-blue-950 hover:text-white hover:transform hover:scale-105 transition-colors duration-300"
+                        className="px-3 py-1.5 bg-slate-50 border-2 border-cyan-700 rounded-lg text-sm flex items-center gap-2 hover:hover:bg-teal-500 hover:bg-opacity-90 hover:text-white hover:transform hover:scale-105 transition-colors duration-300"
                         style={{
                           color: hoveredIndex === index ? "white" : color,
                         }}
@@ -136,7 +136,7 @@ const ExperienceCard = ({
                     <Link
                       key={index}
                       href={project.url}
-                      className="px-4 py-2 bg-gray-700/50 rounded-lg text-sm text-green-400 hover:bg-gray-600/50 transition-all duration-300 flex items-center gap-2 hover:translate-x-1"
+                      className="px-4 py-2 bg-gray-700/50 rounded-lg text-sm text-sky-200 hover:text-white hover:bg-teal-500 hover:bg-opacity-90 transition-all duration-300 flex items-center gap-2 hover:translate-x-1"
                       target="_blank"
                     >
                       <FontAwesomeIcon icon={faLink} className="w-3 h-3" />

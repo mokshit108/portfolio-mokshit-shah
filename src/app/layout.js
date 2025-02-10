@@ -1,5 +1,6 @@
 import "./globals.css";
 import { acme, inter, robotoMono, palanquin } from './font.ts'
+import Navigation from "./component/Navigation/Navigation";
 
 
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         className={`${acme.variable} ${palanquin.variable} ${inter.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
+        <Navigation/>
       </body>
     </html>
   );

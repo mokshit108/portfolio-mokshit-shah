@@ -7,21 +7,18 @@
     {
       "id": 1,
       "href": "mailto:mokshit108@gmail.com",
-      "icon": "/api/placeholder/48/48",
       "text": "mokshit108@gmail.com",
       "type": "email"
     },
     {
       "id": 2,
       "href": "tel:+918104689015",
-      "icon": "/api/placeholder/48/48",
       "text": "+91 8104689015",
       "type": "phone"
     },
     {
       "id": 3,
       "href": "https://wa.me/+918104689015",
-      "icon": "/api/placeholder/48/48",
       "text": "WhatsApp: +91 8104689015",
       "type": "whatsapp"
     }

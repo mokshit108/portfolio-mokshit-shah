@@ -9,7 +9,7 @@ const SkillCard = ({ skill }) => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-2 p-3 rounded-lg bg-teal-500 bg-opacity-5 border-2 border-cyan-700 hover:bg-sky-700  transition-all duration-300 hover:transform hover:scale-105 ">
+    <div className="flex justify-center items-center gap-2 p-3 rounded-lg bg-teal-500 bg-opacity-5 border-2 border-cyan-700 hover:bg-teal-500 hover:bg-opacity-90  transition-all duration-300 hover:transform hover:scale-105 ">
       <FontAwesomeIcon
         icon={getIcon(skill.iconName, skill.type)}
         className="w-5 h-5"
