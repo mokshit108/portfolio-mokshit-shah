@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactLink = ({ href, icon, text }) => (
+const ContactLink = ({ href, text }) => (
   <a
     href={href}
     className="flex items-center gap-4 p-4 rounded-lg hover:bg-teal-500 hover:bg-opacity-90 transition-all group w-full md:w-auto"

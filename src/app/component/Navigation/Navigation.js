@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
-  faUser,
+  faCode,
   faBriefcase,
   faBook,
   faEnvelope
@@ -16,7 +16,7 @@ const Navigation = () => {
 
   const navItems = [
     { href: '#home', icon: faHome, label: 'Home' },
-    { href: '#about', icon: faUser, label: 'About' },
+    { href: '#about', icon: faCode, label: 'About' },
     { href: '#experience', icon: faBriefcase, label: 'Experience' },
     { href: '#projects', icon: faBook, label: 'Projects' },
     { href: '#contact', icon: faEnvelope, label: 'Contact' }
@@ -25,12 +25,12 @@ const Navigation = () => {
   return (
     <nav className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-7 py-3 z-20 rounded-full backdrop-blur-md gap-3">
       {navItems.map((item) => (
-        <Link 
+        <Link
           key={item.href}
-          href={item.href} 
+          href={item.href}
           onClick={() => setActiveSection(item.href)}
           className={`
-            p-3.5 rounded-full text-gray-300 text-xl 
+            p-3.5 rounded-full text-gray-300 text-xl
             hover:bg-black/30 transition-colors duration-300
             ${activeSection === item.href ? 'bg-teal-500 text-white' : ''}
           `}

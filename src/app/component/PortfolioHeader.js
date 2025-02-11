@@ -1,9 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 import portfolioData from '../data/homehero.json';
-
 
 const PortfolioHeader = () => {
   const { personalInfo, backgroundImage, styles } = portfolioData;
@@ -40,8 +38,6 @@ const PortfolioHeader = () => {
       <div
         className="absolute inset-0"
         style={{
-          /* https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg*/
-          /*https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg*/
           backgroundImage: `url('https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -72,29 +68,48 @@ const PortfolioHeader = () => {
             </p>
           </div>
 
-          {/* Right Content - Animated Image */}
-          <motion.div
-            className="flex-shrink-0"
-            animate={{
-              y: [0, -10, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <div className="w-56 h-56">
-              <motion.img
-                src={personalInfo.profileImage.src}
-                alt={personalInfo.profileImage.alt}
-                className="rounded-full object-cover shadow-lg ring-4 ring-blue-500"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              />
+          {/* Right Content - Profile Image and CTA */}
+          <div className="flex flex-col items-center gap-6">
+            <motion.div
+              className="flex-shrink-0"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <div className="w-56 h-56">
+                <motion.img
+                  src={personalInfo.profileImage.src}
+                  alt={personalInfo.profileImage.alt}
+                  className="rounded-full object-cover m-10 shadow-lg ring-4 ring-blue-500"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                />
+              </div>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <div className="flex gap-4 mt-28 ml-12">
+              <a
+                href="/assets/Resume_MokshitShah.pdf"
+                download
+                className="px-6 py-3 bg-teal-500 bg-opacity-90 text-white rounded-full font-semibold hover:bg-teal-700 transition-colors duration-300 flex items-center gap-2"
+              >
+                Download CV
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 bg-transparent border-2 border-sky-700 text-white rounded-full font-semibold hover:bg-sky-100/10 transition-colors duration-300"
+              >
+                Let’s Talk
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
