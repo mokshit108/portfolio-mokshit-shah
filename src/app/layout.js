@@ -1,8 +1,31 @@
 import "./globals.css";
-import { acme, inter, robotoMono, palanquin } from './font.ts'
+import { Inter, Acme, Roboto_Mono, Palanquin } from 'next/font/google';
 import Navigation from "./component/Navigation/Navigation";
 
+const acme = Acme({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-acme',
+});
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
+const palanquin = Palanquin({
+  subsets: ['latin', 'devanagari'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-palanquin',
+});
 
 export const metadata = {
   title: "Create Next App",
