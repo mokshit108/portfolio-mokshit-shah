@@ -2,7 +2,7 @@
     "personalInfo": {
       "name": "Mokshit Shah",
       "title": "Software Developer",
-      "description": "Full-stack developer with expertise in React, Next.js, and Node.js, currently working at AcceleratBSi. Experience in developing e-commerce platforms, business analytics portals, and text analytics applications. Proficient in creating responsive user interfaces using modern frameworks and implementing secure payment systems. Passionate about building efficient, user-friendly applications that solve real-world problems",
+      "description": "Full-stack developer with expertise in React, Next.js, and Node.js, currently working at AcceleratBSi. Proficient in creating responsive user interfaces using modern frameworks. Passionate about building efficient, user-friendly applications that solve real-world problems",
       "profileImage": {
         "src": "/assets/photo_img.jpg",
         "alt": "Your Profile"

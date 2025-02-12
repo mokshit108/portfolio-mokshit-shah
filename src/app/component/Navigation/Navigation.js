@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -23,7 +22,7 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className="fixed bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-3 sm:px-7 py-2 sm:py-3 z-20 rounded-full backdrop-blur-md gap-2 sm:gap-3">
+    <nav className="fixed bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-4 sm:px-7 py-2 sm:py-3 z-20 rounded-full backdrop-blur-md gap-3 sm:gap-3">
       {navItems.map((item) => (
         <Link
           key={item.href}
@@ -31,13 +30,13 @@ const Navigation = () => {
           onClick={() => setActiveSection(item.href)}
           className={`
             relative group
-            p-2 sm:p-3.5 rounded-full text-gray-300
+            p-3 sm:p-3.5 rounded-full text-gray-300
             hover:bg-black/30 transition-colors duration-300
             ${activeSection === item.href ? 'bg-teal-500 text-white' : ''}
           `}
         >
-          <FontAwesomeIcon icon={item.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
-          <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black/75 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+          <FontAwesomeIcon icon={item.icon} className="w-5 h-5 sm:w-5 sm:h-5" />
+          <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/75 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
             {item.label}
           </span>
         </Link>
