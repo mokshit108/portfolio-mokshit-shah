@@ -32,12 +32,12 @@
           "Conceptualized and implemented a dynamic portfolio website showcasing my skills, projects, and achievements in a visually engaging and user-friendly format."
 
         ],
-        "techStack": ["React", "Html", "CSS", "JavaScript"],
-        "liveLink": "https://mokshit-shah-portfolio.vercel.app/",
-        "githubLink": "https://github.com/mokshit108/portfolio",
+        "techStack": ["Next.js", "Tailwind css", "Framer Motion"],
+        "liveLink": "https://portfolio-mokshit.netlify.app/",
+        "githubLink": "https://github.com/mokshit108/portfolio-mokshit-shah",
         "imageSrc": "/icons/portfolioThumbnail.png"
       }
-      
+
     ],
     "icons": {
       "live": {
