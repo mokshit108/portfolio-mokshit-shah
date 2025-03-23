@@ -36,6 +36,18 @@
         "liveLink": "https://portfolio-mokshit.netlify.app/",
         "githubLink": "https://github.com/mokshit108/portfolio-mokshit-shah",
         "imageSrc": "/icons/portfolioThumbnail.png"
+      },
+      {
+        "id": 4,
+        "title": "Kenil Shah & Co",
+        "description": [
+          "Developed a professional website for Kenil Shah & Co firm with responsive design that adapts seamlessly to all devices.",
+          "Implemented smooth animations and transitions using Framer Motion to enhance user experience and create an engaging interface.",
+          "Created a modern, user-friendly website using Next.js, optimizing performance and SEO while ensuring cross-browser compatibility."
+        ],
+        "techStack": ["Next.js", "Tailwind CSS", "Framer Motion"],
+        "liveLink": "https://kenilshah.com/",
+        "imageSrc": "/icons/CaFirmWebsite.png"
       }
 
     ],
