@@ -48,6 +48,18 @@
         "techStack": ["Next.js", "Tailwind CSS", "Framer Motion"],
         "liveLink": "https://kenilshah.com/",
         "imageSrc": "/icons/CaFirmWebsite.png"
+      },
+      {
+        "id": 5,
+        "title": "Analytics Dashboard Tool",
+        "description": [
+          "Developed a comprehensive analytics dashboard with 6 distinct card views, each displaying data in different visualization formats including bar charts and line graphs.",
+          "Implemented design ensuring interactive data filtering and sorting capabilities.",
+          "Built a full-stack solution with React frontend for dynamic data visualization and Node.js backend with PostgreSQL for efficient data storage and retrieval."
+        ],
+        "techStack": ["React", "Node.js", "PostgreSQL", "Chart.js", "Tailwind CSS", "REST API"],
+        "liveLink": "https://dashboard-tool.onrender.com",
+        "imageSrc": "/assets/dashboard-img.png"
       }
 
     ],
