@@ -2,9 +2,19 @@
   "experiences": [
     {
       "id": 1,
+      "company": "CerebralZip",
+      "role": "Web Developer",
+      "period": "May 2025 - Present",
+      "description": [
+        "Designed and implemented responsive, user-friendly UI components for the BRAVO C2 app using React.js."
+      ],
+      "technologies": "React.js, Node.js, Typescript, TailwindCSS"
+    },
+    {
+      "id": 2,
       "company": "AccelerateBSi",
       "role": "Frontend Developer",
-      "period": "June 2024- Present",
+      "period": "June 2024 - May 2025",
       "description": [
         "Built mobile-responsive components using Next.js and Tailwind CSS, enhancing the user interface & design of the project.",
         "Contributed to internal projects by fixing bugs, handling errors, and gaining a deep understanding of project requirements.",
