@@ -6,9 +6,25 @@
       "role": "Web Developer",
       "period": "May 2025 - Present",
       "description": [
-        "Designed and implemented responsive, user-friendly UI components for the BRAVO C2 app using React.js."
+        "Designed and implemented responsive, user-friendly UI components for the BRAVO C2 app using React.js.",
+        "Developed a dynamic case upload system allowing users to upload videos via local file system, DVR integration, or webcam capture.",
+        "Implemented a case management interface to list uploaded cases with an interactive thumbnail preview and modal popup functionality for quick content review.",
+        "Built a responsive video analytics dashboard with a collapsible left sidebar for object palette and a right sidebar for image preview.",
+        "Engineered bounding box detection for objects in video streams with checkbox-controlled timeline highlights, syncing object appearance time to the video player.",
+        "Designed a timeline-linked video interaction system: clicking on detected object instances in the timeline dynamically seeks the video to the corresponding timestamp.",
+        "Used React.js, Tailwind CSS, and video.js for seamless UI/UX and video rendering capabilities."
       ],
-      "technologies": "React.js, Node.js, Typescript, TailwindCSS"
+      "technologies": "React.js, Node.js, Typescript, TailwindCSS",
+       "projects": [
+        {
+          "name": "Bravo C2",
+          "url": "#"
+        },
+        {
+          "name": "CerebVision",
+          "url": "#"
+        }
+      ]
     },
     {
       "id": 2,

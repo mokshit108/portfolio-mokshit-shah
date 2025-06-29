@@ -19,6 +19,12 @@
         "type": "brand"
       },
       {
+    "title": "TypeScript",
+    "iconName": "faCode",
+    "color": "#3178C6",
+    "type": "solid"
+  },
+      {
         "title": "Nodejs",
         "iconName": "faNodeJs",
         "color": "#339933",
