@@ -22,6 +22,7 @@ const ExperienceCard = ({
   description,
   technologies,
   projects,
+  projectExplanations,
 }) => {
   const year = period.split(" ").pop();
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -133,15 +134,46 @@ const ExperienceCard = ({
                 </div>
                 <div className="flex flex-wrap gap-2 md:gap-3">
                   {projects.map((project, index) => (
-                    <Link
-                      key={index}
-                      href={project.url}
-                      className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-700/50 rounded-lg text-xs md:text-sm text-sky-200 hover:text-white hover:bg-teal-500 hover:bg-opacity-90 transition-all duration-300 flex items-center gap-1.5 md:gap-2 hover:translate-x-1"
-                      target="_blank"
-                    >
-                      <FontAwesomeIcon icon={faLink} className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                      {project.name}
-                    </Link>
+                    project.url ? (
+                      <Link
+                        key={index}
+                        href={project.url}
+                        className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-700/50 rounded-lg text-xs md:text-sm text-sky-200 hover:text-white hover:bg-teal-500 hover:bg-opacity-90 transition-all duration-300 flex items-center gap-1.5 md:gap-2 hover:translate-x-1"
+                        target="_blank"
+                      >
+                        <FontAwesomeIcon icon={faLink} className="w-2.5 h-2.5 md:w-3 md:h-3" />
+                        {project.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={index}
+                        className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-700/50 rounded-lg text-xs md:text-sm text-sky-200 flex items-center gap-1.5 md:gap-2 transition-all duration-300 hover:bg-teal-500 hover:bg-opacity-90 hover:text-white hover:translate-x-1 cursor-pointer"
+                      >
+                        <FontAwesomeIcon icon={faLink} className="w-2.5 h-2.5 md:w-3 md:h-3 opacity-50" />
+                        {project.name}
+                      </span>
+                    )
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Project Explanations Section */}
+            {projectExplanations && projectExplanations.length > 0 && (
+              <div className="mt-4 md:mt-6 pt-4 border-t border-gray-700/50">
+                <div className="flex items-center gap-2 mb-3 md:mb-4">
+                  <FontAwesomeIcon
+                    icon={faLaptopCode}
+                    className="text-white w-3 h-3 md:w-4 md:h-4"
+                  />
+                  <h4 className="text-white font-medium text-sm md:text-base">Project Explanations</h4>
+                </div>
+                <div className="space-y-2 md:space-y-3">
+                  {projectExplanations.map((proj, idx) => (
+                    <div key={idx} className="bg-gray-800/60 rounded-lg p-3 md:p-4">
+                      <div className="font-semibold text-cyan-300 text-xs md:text-sm mb-1">{proj.name}</div>
+                      <div className="text-gray-300 text-xs md:text-sm">{proj.explanation}</div>
+                    </div>
                   ))}
                 </div>
               </div>
