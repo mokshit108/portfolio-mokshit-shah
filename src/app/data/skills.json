@@ -4,85 +4,106 @@
         "title": "Reactjs",
         "iconName": "faReact",
         "color": "#61DAFB",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiReact"
       },
       {
         "title": "Python",
         "iconName": "faPython",
         "color": "#3776AB",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiPython"
       },
       {
         "title": "JavaScript",
         "iconName": "faJs",
         "color": "#F7DF1E",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiJavascript"
       },
       {
-    "title": "TypeScript",
-    "iconName": "faCode",
-    "color": "#3178C6",
-    "type": "solid"
-  },
+        "title": "TypeScript",
+        "iconName": "faJs",
+        "color": "#3178C6",
+        "type": "brand",
+        "reactIcon": "SiTypescript"
+      },
       {
         "title": "Nodejs",
         "iconName": "faNodeJs",
         "color": "#339933",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiNodedotjs"
       },
       {
         "title": "Flask",
         "iconName": "faFlask",
         "color": "#FFFFFF",
-        "type": "solid"
+        "type": "solid",
+        "reactIcon": "SiFlask"
       },
       {
         "title": "Redux",
         "iconName": "faBoxArchive",
         "color": "#764ABC",
-        "type": "solid"
+        "type": "solid",
+        "reactIcon": "SiRedux"
       },
       {
         "title": "PostgreSql",
         "iconName": "faDatabase",
         "color": "#336791",
-        "type": "solid"
+        "type": "solid",
+        "reactIcon": "SiPostgresql"
       },
       {
         "title": "HTML",
         "iconName": "faHtml5",
         "color": "#E34F26",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiHtml5"
       },
       {
         "title": "CSS",
         "iconName": "faCss3Alt",
         "color": "#1572B6",
-        "type": "brand"
+        "type": "brand",
+        "reactIcon": "SiCss3"
       },
       {
         "title": "TailwindCSS",
         "iconName": "faCode",
         "color": "#38B2AC",
-        "type": "solid"
+        "type": "solid",
+        "reactIcon": "SiTailwindcss"
       },
       {
         "title": "SQL",
         "iconName": "faDatabase",
-        "color": "#336791",
-        "type": "solid"
-      },
-      {
-        "title": "JSON",
-        "iconName": "faFileCode",
         "color": "#FFFFFF",
-        "type": "solid"
+        "type": "solid",
+        "reactIcon": "SiMysql"
       },
       {
         "title": "Nextjs",
-        "iconName": "faReact",
+        "iconName": "faServer",
         "color": "#FFFFFF",
-        "type": "brand"
+        "type": "solid",
+        "reactIcon": "SiNextdotjs"
+      },
+      {
+        "title": "FastAPI",
+        "iconName": "faPython",
+        "color": "#009688",
+        "type": "brand",
+        "reactIcon": "SiFastapi"
+      },
+      {
+        "title": "Material UI",
+        "iconName": "faReact",
+        "color": "#0081CB",
+        "type": "brand",
+        "reactIcon": "SiMui"
       }
     ]
   }
