@@ -3,6 +3,27 @@
   "projects": [
     {
       "id": 1,
+      "title": "AskMyPDF - AI-Powered PDF Chat Interface",
+      "description": [
+        "Built a web-based application that allows users to upload and interact with large PDF documents via an intelligent chat interface.",
+        "Implemented AI-generated answers with precise citations, enabling users to ask questions about document content and receive accurate responses with exact page references.",
+        "Integrated a smooth PDF viewer that enables direct navigation to referenced pages, creating a seamless document exploration experience.",
+        "Designed an intuitive user interface that combines document viewing with conversational AI for enhanced productivity and document analysis."
+      ],
+      "techStack": [
+        "React",
+        "Node.js",
+        "AI/ML Integration",
+        "PDF Processing",
+        "Natural Language Processing",
+        "Tailwind CSS"
+      ],
+      "liveLink": "https://askmypdf-hlcu.onrender.com/",
+       "githubLink": "https://github.com/mokshit108/AskDocAI",
+      "imageSrc": "/assets/askmypdf-thumbnail.png"
+    },
+    {
+      "id": 2,
       "title": "One Stop Bath",
       "description": [
         "Created a full-stack e-commerce platform featuring dynamic product management, secure user authentication, and responsive design for a seamless user experience on all devices.",
@@ -21,7 +42,7 @@
       "imageSrc": "/icons/onestopbathThumbnail.png"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Academic Management System (AMS)",
       "description": [
         "Led development of AMS for efficient student data management.",
@@ -33,7 +54,7 @@
       "imageSrc": "/icons/AcademicsprojectThumbnail.png"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Portfolio Website",
       "description": [
         "Conceptualized and implemented a dynamic portfolio website showcasing my skills, projects, and achievements in a visually engaging and user-friendly format."
@@ -44,7 +65,7 @@
       "imageSrc": "/icons/portfolioThumbnail.png"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Kenil Shah & Co",
       "description": [
         "Developed a professional website for Kenil Shah & Co firm with responsive design that adapts seamlessly to all devices.",
@@ -56,7 +77,7 @@
       "imageSrc": "/icons/CaFirmWebsite.png"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Analytics Dashboard Tool",
       "description": [
         "Developed a comprehensive analytics dashboard with 6 distinct card views, each displaying data in different visualization formats including bar charts and line graphs.",
@@ -76,7 +97,7 @@
       "imageSrc": "/assets/dashboard-img.png"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Insights Dashboard",
       "description": [
         "Designed and developed a comprehensive mobile-responsive analytics dashboard with three main sections: Overview, Insights, and Demographics.",
