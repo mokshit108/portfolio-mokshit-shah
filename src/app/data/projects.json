@@ -19,7 +19,7 @@
         "Tailwind CSS"
       ],
       "liveLink": "https://askmypdf-hlcu.onrender.com/",
-       "githubLink": "https://github.com/mokshit108/AskDocAI",
+      "githubLink": "https://github.com/mokshit108/AskDocAI",
       "imageSrc": "/assets/askmypdf-thumbnail.png"
     },
     {
@@ -108,6 +108,36 @@
       "liveLink": "https://v-dashboard-site.onrender.com",
       "githubLink": "https://github.com/mokshit108/v-dashboard",
       "imageSrc": "/assets/v-dashboard.png"
+    },
+    {
+      "id": 8,
+      "title": "Mini EdTech Platform",
+      "description": [
+        "Full-stack educational technology platform enabling users to browse courses, enroll as students or professors, and manage content.",
+        "Frontend: Next.js 13 (TypeScript), React 18, Tailwind CSS with Apollo Client for GraphQL.",
+        "Backend: Node.js, Express, Apollo Server (GraphQL) with Prisma ORM and PostgreSQL.",
+        "Secure authentication with JWT and bcryptjs; role-based enrollments and profile management.",
+        "Responsive, modern UI/UX with real-time updates via GraphQL.",
+        "Configured for deployment on Render; includes database migrations and seeding."
+      ],
+      "techStack": [
+        "Next.js 13",
+        "TypeScript",
+        "React 18",
+        "Tailwind CSS",
+        "Apollo Client",
+        "Node.js",
+        "Express",
+        "Apollo Server",
+        "GraphQL",
+        "Prisma",
+        "PostgreSQL",
+        "JWT",
+        "bcryptjs"
+      ],
+      "liveLink": "https://educourse-5dx4.onrender.com/",
+      "githubLink": "https://github.com/mokshit108/EduCourse",
+      "imageSrc": "/assets/edtech-platform.png"
     }
   ],
   "icons": {
