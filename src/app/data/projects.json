@@ -3,6 +3,58 @@
   "projects": [
     {
       "id": 1,
+      "title": "One Stop Bath",
+      "description": [
+        "Created a full-stack e-commerce platform featuring dynamic product management, secure user authentication, and responsive design for a seamless user experience on all devices.",
+        "Integrated Context API for efficient cart management, implemented coupon code functionality, and ensured smooth user interactions.",
+        "Developed APIs for user data handling and payment processing, and integrated Razorpay for secure transactions."
+      ],
+      "techStack": [
+        "React",
+        "Tailwind CSS",
+        "NodeJs",
+        "PostgreSql",
+        "JWT Token",
+        "Google Auth"
+      ],
+      "liveLink": "https://www.onestopbath.in/",
+      "imageSrc": "/icons/onestopbathThumbnail.png"
+    },
+    {
+      "id": 2,
+      "title": "Kenil Shah & Co",
+      "description": [
+        "Developed a professional website for Kenil Shah & Co firm with responsive design that adapts seamlessly to all devices.",
+        "Implemented smooth animations and transitions using Framer Motion to enhance user experience and create an engaging interface.",
+        "Created a modern, user-friendly website using Next.js, optimizing performance and SEO while ensuring cross-browser compatibility."
+      ],
+      "techStack": ["Next.js", "Tailwind CSS", "Framer Motion"],
+      "liveLink": "https://kenilshah.com/",
+      "imageSrc": "/icons/CaFirmWebsite.png"
+    },
+    
+    {
+      "id": 3,
+      "title": "Cryptocurrency Portfolio Tracker",
+      "description": [
+        "A modern cryptocurrency portfolio tracker built with React and Redux that lets users manage a watchlist, track holdings, and view real-time prices with data from CoinGecko.",
+        "Featuring responsive design, interactive charts, sparklines, and market ranks for comprehensive market analysis.",
+        "Offers an intuitive, seamless way to monitor crypto investments with real-time price updates and portfolio performance tracking."
+      ],
+      "techStack": [
+        "React",
+        "Redux",
+        "CoinGecko API",
+        "Chart.js",
+        "Tailwind CSS",
+        "REST API"
+      ],
+      "liveLink": "https://coingeckotokenportfolio.netlify.app/",
+      "githubLink": "https://github.com/mokshit108/token-portfolio",
+      "imageSrc": "/assets/token-portfolio.png"
+    },
+    {
+      "id": 4,
       "title": "AskMyPDF - AI-Powered PDF Chat Interface",
       "description": [
         "Built a web-based application that allows users to upload and interact with large PDF documents via an intelligent chat interface.",
@@ -23,26 +75,7 @@
       "imageSrc": "/assets/askmypdf-thumbnail.png"
     },
     {
-      "id": 2,
-      "title": "One Stop Bath",
-      "description": [
-        "Created a full-stack e-commerce platform featuring dynamic product management, secure user authentication, and responsive design for a seamless user experience on all devices.",
-        "Integrated Context API for efficient cart management, implemented coupon code functionality, and ensured smooth user interactions.",
-        "Developed APIs for user data handling and payment processing, and integrated Razorpay for secure transactions."
-      ],
-      "techStack": [
-        "React",
-        "Tailwind CSS",
-        "NodeJs",
-        "PostgreSql",
-        "JWT Token",
-        "Google Auth"
-      ],
-      "liveLink": "https://www.onestopbath.in/",
-      "imageSrc": "/icons/onestopbathThumbnail.png"
-    },
-    {
-      "id": 3,
+      "id": 5,
       "title": "Academic Management System (AMS)",
       "description": [
         "Led development of AMS for efficient student data management.",
@@ -54,7 +87,7 @@
       "imageSrc": "/icons/AcademicsprojectThumbnail.png"
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Portfolio Website",
       "description": [
         "Conceptualized and implemented a dynamic portfolio website showcasing my skills, projects, and achievements in a visually engaging and user-friendly format."
@@ -64,20 +97,9 @@
       "githubLink": "https://github.com/mokshit108/portfolio-mokshit-shah",
       "imageSrc": "/icons/portfolioThumbnail.png"
     },
+    
     {
-      "id": 5,
-      "title": "Kenil Shah & Co",
-      "description": [
-        "Developed a professional website for Kenil Shah & Co firm with responsive design that adapts seamlessly to all devices.",
-        "Implemented smooth animations and transitions using Framer Motion to enhance user experience and create an engaging interface.",
-        "Created a modern, user-friendly website using Next.js, optimizing performance and SEO while ensuring cross-browser compatibility."
-      ],
-      "techStack": ["Next.js", "Tailwind CSS", "Framer Motion"],
-      "liveLink": "https://kenilshah.com/",
-      "imageSrc": "/icons/CaFirmWebsite.png"
-    },
-    {
-      "id": 6,
+      "id": 7,
       "title": "Analytics Dashboard Tool",
       "description": [
         "Developed a comprehensive analytics dashboard with 6 distinct card views, each displaying data in different visualization formats including bar charts and line graphs.",
@@ -97,7 +119,7 @@
       "imageSrc": "/assets/dashboard-img.png"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Insights Dashboard",
       "description": [
         "Designed and developed a comprehensive mobile-responsive analytics dashboard with three main sections: Overview, Insights, and Demographics.",
@@ -110,7 +132,7 @@
       "imageSrc": "/assets/v-dashboard.png"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Mini EdTech Platform",
       "description": [
         "Full-stack educational technology platform enabling users to browse courses, enroll as students or professors, and manage content.",
