@@ -21,12 +21,19 @@
         },
         {
           "name": "CerebVision"
+        },
+        {
+          "name": "UnFogg"
         }
       ],
       "projectExplanations": [
         {
           "name": "CerebVision",
           "explanation": "Developed a dynamic case upload system allowing users to upload videos via local file system, DVR integration, or webcam capture. Implemented a case management interface to list uploaded cases with an interactive thumbnail preview and modal popup functionality for quick content review. Built a responsive video analytics dashboard with a collapsible left sidebar for object palette and a right sidebar for image preview. Engineered bounding box detection for objects in video streams with checkbox-controlled timeline highlights, syncing object appearance time to the video player. Designed a timeline-linked video interaction system: clicking on detected object instances in the timeline dynamically seeks the video to the corresponding timestamp. Used React.js, Tailwind CSS, and video.js for seamless UI/UX and video rendering capabilities."
+        },
+        {
+          "name": "UnFogg",
+          "explanation": "Developed a responsive analytics dashboard for UnFogg, visualizing real-time audience insights using interactive bar charts and custom UI components. Built the Creative Panel feature where users can generate AI-powered creatives/images based on prompts using Banana AI integration. Implemented seamless user experience across pages with optimized React components, modular UI, and API-driven data flow. Collaborated closely with the product team to translate complex AI outputs into intuitive, user-friendly interfaces."
         }
       ]
     },
