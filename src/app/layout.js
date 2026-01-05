@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter, Acme, Roboto_Mono, Palanquin } from 'next/font/google';
 import Navigation from "./component/Navigation/Navigation";
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemeToggle from "./component/ThemeToggle/ThemeToggle";
 
 const acme = Acme({
   weight: '400',
@@ -38,8 +40,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${acme.variable} ${palanquin.variable} ${inter.variable} ${robotoMono.variable} antialiased`}
       >
-        {children}
-        <Navigation/>
+        <ThemeProvider>
+          {children}
+          <Navigation/>
+          <ThemeToggle/>
+        </ThemeProvider>
       </body>
     </html>
   );

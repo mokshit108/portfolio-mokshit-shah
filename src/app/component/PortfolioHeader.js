@@ -2,9 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import portfolioData from '../data/homehero.json';
+import { useTheme } from '../context/ThemeContext';
 
 const PortfolioHeader = () => {
   const { personalInfo, backgroundImage, styles } = portfolioData;
+  const { theme } = useTheme();
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const titles = ['Frontend Developer', 'Full Stack Developer', 'Backend Developer'];
@@ -33,38 +35,49 @@ const PortfolioHeader = () => {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center py-8 sm:py-12">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url('https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.3)',
-          zIndex: 0
-        }}
-      />
-
-      <div className="absolute inset-0 z-[1] bg-black/50" />
+    <div className={`min-h-screen relative overflow-hidden flex items-center py-8 sm:py-12 transition-colors duration-300 ${
+      theme === 'light' ? 'bg-white' : 'bg-[#1e3a8a]'
+    }`}>
+      {/* Background Image - only show in dark theme */}
+      {theme === 'dark' && (
+        <>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('https://images.stockcake.com/public/9/f/6/9f6994d9-b91e-46ef-b05c-df5d06ebad05_large/coding-on-laptop-stockcake.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              filter: 'brightness(0.3)',
+              zIndex: 0
+            }}
+          />
+          <div className="absolute inset-0 z-[1] bg-black/50" />
+        </>
+      )}
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Left Content */}
           <div className="flex-1 space-y-4 sm:space-y-6 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white font-acme">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide font-acme transition-colors duration-300 ${
+              theme === 'light' ? 'text-gray-900' : 'text-white'
+            }`}>
               {personalInfo.name}
             </h1>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-sky-400 font-bold font-palanquin min-h-[40px]">
-              <span className="mr-2 sm:mr-4">I’m</span>
+            <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold font-palanquin min-h-[40px] transition-colors duration-300 ${
+              theme === 'light' ? 'text-blue-600' : 'text-sky-400'
+            }`}>
+              <span className="mr-2 sm:mr-4">I'm</span>
               {displayText}
               <span className="animate-pulse">|</span>
             </h2>
 
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 font-semibold leading-relaxed">
+            <p className={`text-lg sm:text-xl lg:text-2xl font-semibold leading-relaxed transition-colors duration-300 ${
+              theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+            }`}>
               {personalInfo.description}
             </p>
           </div>
@@ -97,10 +110,14 @@ const PortfolioHeader = () => {
             {/* Social Media Icons */}
             <div className="flex items-center justify-center gap-4 mt-16 ">
               <a href="https://www.linkedin.com/in/mokshit-shah-4493321a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg className="w-8 h-8 text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.792 0 0 .77 0 1.724v20.551C0 23.228.792 24 1.77 24h20.459C23.208 24 24 23.228 24 22.275V1.724C24 .77 23.208 0 22.23 0zM7.09 20.452H3.677V9.034H7.09v11.418zm-1.707-13.01a2.013 2.013 0 01-2.018-2.02A2.012 2.012 0 015.377 3.4c1.115 0 2.018.903 2.018 2.021a2.013 2.013 0 01-2.018 2.021zm14.262 13.01h-3.413v-5.604c0-1.337-.024-3.06-1.866-3.06-1.868 0-2.154 1.457-2.154 2.963v5.701H8.799V9.034H12v1.561h.049c.447-.847 1.539-1.74 3.165-1.74 3.386 0 4.012 2.23 4.012 5.127v6.47z" /></svg>
+                <svg className={`w-8 h-8 transition-colors ${
+                  theme === 'light' ? 'text-blue-600 hover:text-blue-700' : 'text-sky-400 hover:text-sky-500'
+                }`} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.792 0 0 .77 0 1.724v20.551C0 23.228.792 24 1.77 24h20.459C23.208 24 24 23.228 24 22.275V1.724C24 .77 23.208 0 22.23 0zM7.09 20.452H3.677V9.034H7.09v11.418zm-1.707-13.01a2.013 2.013 0 01-2.018-2.02A2.012 2.012 0 015.377 3.4c1.115 0 2.018.903 2.018 2.021a2.013 2.013 0 01-2.018 2.021zm14.262 13.01h-3.413v-5.604c0-1.337-.024-3.06-1.866-3.06-1.868 0-2.154 1.457-2.154 2.963v5.701H8.799V9.034H12v1.561h.049c.447-.847 1.539-1.74 3.165-1.74 3.386 0 4.012 2.23 4.012 5.127v6.47z" /></svg>
               </a>
               <a href="https://github.com/mokshit108" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <svg className="w-8 h-8 text-slate-800 dark:text-white hover:text-slate-600 transition-colors" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.426 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.109-1.462-1.109-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.22-.254-4.555-1.112-4.555-4.946 0-1.092.39-1.987 1.03-2.684-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.203 2.397.1 2.65.64.697 1.029 1.592 1.029 2.684 0 3.842-2.338 4.688-4.566 4.937.36.309.681.92.681 1.855 0 1.338-.013 2.419-.013 2.749 0 .268.18.579.688.481C19.138 20.203 22 16.446 22 12.021 22 6.484 17.523 2 12 2z" clipRule="evenodd" /></svg>
+                <svg className={`w-8 h-8 transition-colors ${
+                  theme === 'light' ? 'text-gray-900 hover:text-gray-700' : 'text-white hover:text-gray-300'
+                }`} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.426 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.109-1.462-1.109-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.22-.254-4.555-1.112-4.555-4.946 0-1.092.39-1.987 1.03-2.684-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.203 2.397.1 2.65.64.697 1.029 1.592 1.029 2.684 0 3.842-2.338 4.688-4.566 4.937.36.309.681.92.681 1.855 0 1.338-.013 2.419-.013 2.749 0 .268.18.579.688.481C19.138 20.203 22 16.446 22 12.021 22 6.484 17.523 2 12 2z" clipRule="evenodd" /></svg>
               </a>
               <a
                 href="https://drive.google.com/file/d/10mJUsm9VHLNQfNA1UPntA7Y1a44FXnBq/view?usp=drivesdk"
@@ -131,9 +148,13 @@ const PortfolioHeader = () => {
               </a>
               <a
                 href="#contact"
-                className="px-4 sm:px-6 py-2.5 sm:py-3 bg-transparent border-2 border-sky-700 text-white rounded-full font-semibold hover:bg-sky-100/10 transition-colors duration-300 text-center text-sm sm:text-base"
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 bg-transparent border-2 rounded-full font-semibold transition-colors duration-300 text-center text-sm sm:text-base ${
+                  theme === 'light' 
+                    ? 'border-blue-600 text-blue-600 hover:bg-blue-50' 
+                    : 'border-sky-700 text-white hover:bg-sky-100/10'
+                }`}
               >
-                Let’s Talk
+                Let's Talk
               </a>
             </div>
           </div>

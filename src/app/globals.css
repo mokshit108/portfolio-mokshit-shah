@@ -13,17 +13,23 @@
   --font-palanquin: '';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Light theme */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background: #1e3a8a;
+  --foreground: #ededed;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Utility classes for fonts */

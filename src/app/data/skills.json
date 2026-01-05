@@ -38,7 +38,7 @@
       {
         "title": "Flask",
         "iconName": "faFlask",
-        "color": "#FFFFFF",
+        "color": "#000000",
         "type": "solid",
         "reactIcon": "SiFlask"
       },
@@ -80,14 +80,14 @@
       {
         "title": "SQL",
         "iconName": "faDatabase",
-        "color": "#FFFFFF",
+        "color": "#00758F",
         "type": "solid",
         "reactIcon": "SiMysql"
       },
       {
         "title": "Nextjs",
         "iconName": "faServer",
-        "color": "#FFFFFF",
+        "color": "#000000",
         "type": "solid",
         "reactIcon": "SiNextdotjs"
       },

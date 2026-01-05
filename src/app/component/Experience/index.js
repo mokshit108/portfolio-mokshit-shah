@@ -4,11 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import ExperienceCard from './ExperienceCard';
 import experienceData from '../../data/experience.json';
+import { useTheme } from '../../context/ThemeContext';
 
 const ExperienceSection = () => {
+  const { theme } = useTheme();
+  
   return (
     <motion.section
-      className="py-8 md:py-16 bg-[#001a33] min-h-screen border-b-2 border-gray-600"
+      className={`py-8 md:py-16 min-h-screen border-b-2 transition-colors duration-300 ${
+        theme === 'light' 
+          ? 'bg-white border-gray-300' 
+          : 'bg-[#001a33] border-gray-600'
+      }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
@@ -22,9 +29,13 @@ const ExperienceSection = () => {
         >
           <FontAwesomeIcon
             icon={faBriefcase}
-            className="text-teal-500 w-6 h-6 md:w-10 md:h-10"
+            className={`w-6 h-6 md:w-10 md:h-10 transition-colors duration-300 ${
+              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
+            }`}
           />
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-wide font-palanquin">Experience</h2>
+          <h2 className={`text-3xl md:text-5xl font-bold tracking-wide font-palanquin transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-900' : 'text-white'
+          }`}>Experience</h2>
         </motion.div>
 
         <div className="relative">

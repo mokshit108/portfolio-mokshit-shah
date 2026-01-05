@@ -5,12 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import EducationCard from './EducationCard';
 import educationData from '../../data/education.json';
+import { useTheme } from '../../context/ThemeContext';
 
 const EducationSection = () => {
+  const { theme } = useTheme();
+  
   return (
     <motion.section
       id="education"
-      className="py-10 sm:py-20 bg-[#001a33] border-b-2 border-gray-600"
+      className={`py-10 sm:py-20 border-b-2 transition-colors duration-300 ${
+        theme === 'light' 
+          ? 'bg-white border-gray-300' 
+          : 'bg-[#001a33] border-gray-600'
+      }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
@@ -24,9 +31,13 @@ const EducationSection = () => {
         >
           <FontAwesomeIcon
             icon={faGraduationCap}
-            className="text-teal-500 w-8 h-8 sm:w-12 sm:h-12"
+            className={`w-8 h-8 sm:w-12 sm:h-12 transition-colors duration-300 ${
+              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
+            }`}
           />
-          <h2 className="text-3xl sm:text-5xl font-bold text-white font-palanquin tracking-wide">
+          <h2 className={`text-3xl sm:text-5xl font-bold font-palanquin tracking-wide transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-900' : 'text-white'
+          }`}>
             Education
           </h2>
         </motion.div>

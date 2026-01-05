@@ -5,13 +5,19 @@ import ProjectCard from './ProjectCard';
 import projectsData from '../../data/projects.json';
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTheme } from '../../context/ThemeContext';
 
 const ProjectSection = () => {
   const { sectionTitle, projects } = projectsData;
+  const { theme } = useTheme();
 
   return (
     <motion.div
-      className="bg-[#001a33] min-h-screen py-8 sm:py-16 px-4 border-b-2 border-gray-600"
+      className={`min-h-screen py-8 sm:py-16 px-4 border-b-2 transition-colors duration-300 ${
+        theme === 'light' 
+          ? 'bg-white border-gray-300' 
+          : 'bg-[#001a33] border-gray-600'
+      }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
@@ -25,9 +31,13 @@ const ProjectSection = () => {
         >
           <FontAwesomeIcon
             icon={faFolderOpen}
-            className="text-teal-500 w-8 h-8 sm:w-12 sm:h-12"
+            className={`w-8 h-8 sm:w-12 sm:h-12 transition-colors duration-300 ${
+              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
+            }`}
           />
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-wide text-white font-palanquin">
+          <h2 className={`text-3xl sm:text-5xl font-bold tracking-wide font-palanquin transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-900' : 'text-white'
+          }`}>
             {sectionTitle}
           </h2>
         </motion.div>

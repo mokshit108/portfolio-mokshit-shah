@@ -14,6 +14,7 @@ import {
 import { getTechIcon } from "./utils";
 import experienceData from "../../data/experience.json";
 import { iconMap } from "./utils";
+import { useTheme } from "../../context/ThemeContext";
 
 const ExperienceCard = ({
   company,
@@ -26,6 +27,7 @@ const ExperienceCard = ({
 }) => {
   const year = period.split(" ").pop();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const { theme } = useTheme();
 
   return (
     <div className="relative flex flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16">
@@ -33,22 +35,36 @@ const ExperienceCard = ({
       <div className="flex md:w-28 pt-2 md:pt-6 text-left md:text-right items-center md:justify-end gap-2">
         <FontAwesomeIcon
           icon={faCalendarAlt}
-          className="text-teal-400 w-4 h-4 md:w-6 md:h-6"
+          className={`w-4 h-4 md:w-6 md:h-6 transition-colors duration-300 ${
+            theme === 'light' ? 'text-blue-600' : 'text-teal-400'
+          }`}
         />
-        <span className="text-white font-bold text-lg md:text-xl">{year}</span>
+        <span className={`font-bold text-lg md:text-xl transition-colors duration-300 ${
+          theme === 'light' ? 'text-gray-900' : 'text-white'
+        }`}>{year}</span>
       </div>
 
       {/* Timeline dot and line */}
       <div className="hidden md:flex relative flex-col items-center">
-        <div className="w-4 h-4 rounded-full bg-teal-300 mt-8 flex items-center justify-center">
-          <FontAwesomeIcon icon={faCircle} className="text-teal-700 w-2 h-2" />
+        <div className={`w-4 h-4 rounded-full mt-8 flex items-center justify-center transition-colors duration-300 ${
+          theme === 'light' ? 'bg-blue-400' : 'bg-teal-300'
+        }`}>
+          <FontAwesomeIcon icon={faCircle} className={`w-2 h-2 transition-colors duration-300 ${
+            theme === 'light' ? 'text-blue-700' : 'text-teal-700'
+          }`} />
         </div>
-        <div className="w-0.5 h-full bg-gray-700 -mt-2" />
+        <div className={`w-0.5 h-full -mt-2 transition-colors duration-300 ${
+          theme === 'light' ? 'bg-gray-300' : 'bg-gray-700'
+        }`} />
       </div>
 
       {/* Content card */}
       <div className="flex-1">
-        <div className="bg-teal-400 bg-opacity-5 rounded-xl p-4 md:p-6 border border-gray-700/50 backdrop-blur-sm hover:border-teal-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
+        <div className={`rounded-xl p-4 md:p-6 border backdrop-blur-sm transition-all duration-300 hover:shadow-lg ${
+          theme === 'light'
+            ? 'bg-blue-50 border-gray-300 hover:border-blue-400 hover:shadow-blue-200/50'
+            : 'bg-teal-400 bg-opacity-5 border-gray-700/50 hover:border-teal-500/50 hover:shadow-teal-500/10'
+        }`}>
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 md:mb-6">
             <div className="flex items-start gap-3 md:gap-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-100 rounded-xl flex items-center justify-center transform transition-transform duration-300 hover:rotate-12">
@@ -58,26 +74,38 @@ const ExperienceCard = ({
                 />
               </div>
               <div>
-                <h3 className="font-bold text-lg md:text-xl text-white mb-1">{company}</h3>
+                <h3 className={`font-bold text-lg md:text-xl mb-1 transition-colors duration-300 ${
+                  theme === 'light' ? 'text-gray-900' : 'text-white'
+                }`}>{company}</h3>
                 <div className="flex items-center gap-2">
                   <FontAwesomeIcon
                     icon={faBriefcase}
-                    className="text-cyan-300 w-3 h-3 md:w-4 md:h-4"
+                    className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-300 ${
+                      theme === 'light' ? 'text-blue-600' : 'text-cyan-300'
+                    }`}
                   />
-                  <p className="text-cyan-300 font-md text-sm md:text-base">{role}</p>
+                  <p className={`font-md text-sm md:text-base transition-colors duration-300 ${
+                    theme === 'light' ? 'text-blue-600' : 'text-cyan-300'
+                  }`}>{role}</p>
                 </div>
                 <div className="flex items-center gap-2 mt-1">
                   <FontAwesomeIcon
                     icon={faCalendarAlt}
-                    className="text-gray-400 w-3 h-3"
+                    className={`w-3 h-3 transition-colors duration-300 ${
+                      theme === 'light' ? 'text-gray-600' : 'text-gray-400'
+                    }`}
                   />
-                  <p className="text-slate-400 font-normal text-xs md:text-sm">{period}</p>
+                  <p className={`font-normal text-xs md:text-sm transition-colors duration-300 ${
+                    theme === 'light' ? 'text-gray-600' : 'text-slate-400'
+                  }`}>{period}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-3 md:space-y-4 text-gray-300 text-sm md:text-base">
+          <div className={`space-y-3 md:space-y-4 text-sm md:text-base transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+          }`}>
             {description.map((item, index) => (
               <p key={index} className="flex gap-2 md:gap-3 items-start group">
                 <FontAwesomeIcon
@@ -89,13 +117,19 @@ const ExperienceCard = ({
             ))}
 
             {technologies && (
-              <div className="mt-4 md:mt-6 pt-4 border-t border-gray-700/50">
+              <div className={`mt-4 md:mt-6 pt-4 border-t transition-colors duration-300 ${
+                theme === 'light' ? 'border-gray-300' : 'border-gray-700/50'
+              }`}>
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
                   <FontAwesomeIcon
                     icon={faLaptopCode}
-                    className="text-white w-3 h-3 md:w-4 md:h-4"
+                    className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-300 ${
+                      theme === 'light' ? 'text-gray-900' : 'text-white'
+                    }`}
                   />
-                  <h4 className="text-white font-medium text-sm md:text-base">Technologies</h4>
+                  <h4 className={`font-medium text-sm md:text-base transition-colors duration-300 ${
+                    theme === 'light' ? 'text-gray-900' : 'text-white'
+                  }`}>Technologies</h4>
                 </div>
                 <div className="flex flex-wrap gap-2 md:gap-3">
                   {technologies.split(", ").map((tech, index) => {
@@ -107,9 +141,14 @@ const ExperienceCard = ({
                     return (
                       <span
                         key={index}
-                        className="px-2 md:px-3 py-1 md:py-1.5 bg-slate-50 border-2 border-cyan-700 rounded-lg text-xs md:text-sm flex items-center gap-1.5 md:gap-2 hover:bg-teal-500 hover:bg-opacity-90 hover:text-white hover:transform hover:scale-105 transition-colors duration-300"
+                        className={`px-2 md:px-3 py-1 md:py-1.5 border-2 rounded-lg text-xs md:text-sm flex items-center gap-1.5 md:gap-2 hover:transform hover:scale-105 transition-colors duration-300 ${
+                          theme === 'light'
+                            ? 'bg-white border-blue-400 hover:bg-blue-100'
+                            : 'bg-slate-50 border-cyan-700 hover:bg-teal-500 hover:bg-opacity-90 hover:text-white'
+                        }`}
                         style={{
-                          color: hoveredIndex === index ? "white" : color,
+                          color: hoveredIndex === index && theme === 'dark' ? "white" : 
+                                 hoveredIndex === index && theme === 'light' ? color : color,
                         }}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
@@ -124,13 +163,19 @@ const ExperienceCard = ({
             )}
 
             {projects && (
-              <div className="mt-4 md:mt-6 pt-4 border-t border-gray-700/50">
+              <div className={`mt-4 md:mt-6 pt-4 border-t transition-colors duration-300 ${
+                theme === 'light' ? 'border-gray-300' : 'border-gray-700/50'
+              }`}>
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
                   <FontAwesomeIcon
                     icon={faLink}
-                    className="text-white w-3 h-3 md:w-4 md:h-4"
+                    className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-300 ${
+                      theme === 'light' ? 'text-gray-900' : 'text-white'
+                    }`}
                   />
-                  <h4 className="text-white font-medium text-sm md:text-base">Key Projects</h4>
+                  <h4 className={`font-medium text-sm md:text-base transition-colors duration-300 ${
+                    theme === 'light' ? 'text-gray-900' : 'text-white'
+                  }`}>Key Projects</h4>
                 </div>
                 <div className="flex flex-wrap gap-2 md:gap-3">
                   {projects.map((project, index) => (
@@ -138,7 +183,11 @@ const ExperienceCard = ({
                       <Link
                         key={index}
                         href={project.url}
-                        className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-700/50 rounded-lg text-xs md:text-sm text-sky-200 hover:text-white hover:bg-teal-500 hover:bg-opacity-90 transition-all duration-300 flex items-center gap-1.5 md:gap-2 hover:translate-x-1"
+                        className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg text-xs md:text-sm transition-all duration-300 flex items-center gap-1.5 md:gap-2 hover:translate-x-1 ${
+                          theme === 'light'
+                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                            : 'bg-gray-700/50 text-sky-200 hover:text-white hover:bg-teal-500 hover:bg-opacity-90'
+                        }`}
                         target="_blank"
                       >
                         <FontAwesomeIcon icon={faLink} className="w-2.5 h-2.5 md:w-3 md:h-3" />
@@ -147,7 +196,11 @@ const ExperienceCard = ({
                     ) : (
                       <span
                         key={index}
-                        className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-700/50 rounded-lg text-xs md:text-sm text-sky-200 flex items-center gap-1.5 md:gap-2 transition-all duration-300 hover:bg-teal-500 hover:bg-opacity-90 hover:text-white hover:translate-x-1 cursor-pointer"
+                        className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg text-xs md:text-sm flex items-center gap-1.5 md:gap-2 transition-all duration-300 hover:translate-x-1 cursor-pointer ${
+                          theme === 'light'
+                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                            : 'bg-gray-700/50 text-sky-200 hover:bg-teal-500 hover:bg-opacity-90 hover:text-white'
+                        }`}
                       >
                         <FontAwesomeIcon icon={faLink} className="w-2.5 h-2.5 md:w-3 md:h-3 opacity-50" />
                         {project.name}
@@ -160,19 +213,31 @@ const ExperienceCard = ({
 
             {/* Project Explanations Section */}
             {projectExplanations && projectExplanations.length > 0 && (
-              <div className="mt-4 md:mt-6 pt-4 border-t border-gray-700/50">
+              <div className={`mt-4 md:mt-6 pt-4 border-t transition-colors duration-300 ${
+                theme === 'light' ? 'border-gray-300' : 'border-gray-700/50'
+              }`}>
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
                   <FontAwesomeIcon
                     icon={faLaptopCode}
-                    className="text-white w-3 h-3 md:w-4 md:h-4"
+                    className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-300 ${
+                      theme === 'light' ? 'text-gray-900' : 'text-white'
+                    }`}
                   />
-                  <h4 className="text-white font-medium text-sm md:text-base">Project Explanations</h4>
+                  <h4 className={`font-medium text-sm md:text-base transition-colors duration-300 ${
+                    theme === 'light' ? 'text-gray-900' : 'text-white'
+                  }`}>Project Explanations</h4>
                 </div>
                 <div className="space-y-2 md:space-y-3">
                   {projectExplanations.map((proj, idx) => (
-                    <div key={idx} className="bg-gray-800/60 rounded-lg p-3 md:p-4">
-                      <div className="font-semibold text-cyan-300 text-xs md:text-sm mb-1">{proj.name}</div>
-                      <div className="text-gray-300 text-xs md:text-sm">{proj.explanation}</div>
+                    <div key={idx} className={`rounded-lg p-3 md:p-4 transition-colors duration-300 ${
+                      theme === 'light' ? 'bg-blue-50' : 'bg-gray-800/60'
+                    }`}>
+                      <div className={`font-semibold text-xs md:text-sm mb-1 transition-colors duration-300 ${
+                        theme === 'light' ? 'text-blue-700' : 'text-cyan-300'
+                      }`}>{proj.name}</div>
+                      <div className={`text-xs md:text-sm transition-colors duration-300 ${
+                        theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+                      }`}>{proj.explanation}</div>
                     </div>
                   ))}
                 </div>
