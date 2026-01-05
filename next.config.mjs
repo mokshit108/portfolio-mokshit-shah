@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    experimental: {
-      fontLoaders: [
-        { loader: '@next/font/google' }
-      ],
-    }
-  };
+const nextConfig = {};
 
-  export default nextConfig;
+export default nextConfig;
