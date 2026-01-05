@@ -12,15 +12,10 @@
     },
     {
       "id": 2,
-      "href": "tel:+918104689015",
+      "phoneHref": "tel:+918104689015",
+      "whatsappHref": "https://wa.me/+918104689015",
       "text": "+91 8104689015",
-      "type": "phone"
-    },
-    {
-      "id": 3,
-      "href": "https://wa.me/+918104689015",
-      "text": "WhatsApp: +91 8104689015",
-      "type": "whatsapp"
+      "type": "phone-whatsapp"
     }
   ],
   "credit": {

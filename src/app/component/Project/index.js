@@ -13,44 +13,58 @@ const ProjectSection = () => {
 
   return (
     <motion.div
-      className={`min-h-screen py-8 sm:py-16 px-4 border-b-2 transition-colors duration-300 ${
+      className={`min-h-screen py-12 sm:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
         theme === 'light' 
-          ? 'bg-white border-gray-300' 
-          : 'bg-[#001a33] border-gray-600'
+          ? 'bg-gradient-to-b from-white to-gray-50' 
+          : 'bg-gradient-to-b from-[#001a33] to-[#000d1a]'
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <motion.div
-          className="flex items-center justify-center gap-2 sm:gap-4 mb-8 sm:mb-16"
+          className="text-center mb-12 sm:mb-20"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <FontAwesomeIcon
-            icon={faFolderOpen}
-            className={`w-8 h-8 sm:w-12 sm:h-12 transition-colors duration-300 ${
-              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
-            }`}
-          />
-          <h2 className={`text-3xl sm:text-5xl font-bold tracking-wide font-palanquin transition-colors duration-300 ${
-            theme === 'light' ? 'text-gray-900' : 'text-white'
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+            <FontAwesomeIcon
+              icon={faFolderOpen}
+              className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
+                theme === 'light' ? 'text-blue-600' : 'text-teal-400'
+              }`}
+            />
+            <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
+              theme === 'light' ? 'text-gray-900' : 'text-white'
+            }`}>
+              {sectionTitle}
+            </h2>
+          </div>
+          <div className={`w-24 h-1 mx-auto rounded-full transition-colors duration-300 ${
+            theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
+          }`} />
+          <p className={`mt-6 text-lg sm:text-xl max-w-2xl mx-auto transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-600' : 'text-gray-400'
           }`}>
-            {sectionTitle}
-          </h2>
+            A collection of projects showcasing my skills and experience in web development
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.1
+                delay: index * 0.1,
+                ease: "easeOut"
               }}
             >
               <ProjectCard {...project} />

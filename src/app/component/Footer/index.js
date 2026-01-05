@@ -13,38 +13,41 @@ const FooterSection = () => {
 
   return (
     <motion.footer
-      className={`transition-colors duration-300 ${
+      className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
         theme === 'light'
-          ? 'bg-white text-gray-900'
-          : 'bg-[#001a33] text-white'
+          ? 'bg-gradient-to-b from-white to-gray-50'
+          : 'bg-gradient-to-b from-[#001a33] to-[#000d1a]'
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+      <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center">
           {/* Header */}
           <motion.div
-            className="mb-8 sm:mb-12 text-center px-4"
+            className="text-center mb-12 sm:mb-20"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center justify-center gap-2 sm:gap-4 mb-3 sm:mb-4">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className={`w-8 h-8 sm:w-12 sm:h-12 transition-colors duration-300 ${
-                  theme === 'light' ? 'text-blue-600' : 'text-teal-500'
+                className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
+                  theme === 'light' ? 'text-blue-600' : 'text-teal-400'
                 }`}
               />
-              <h3 className={`text-3xl sm:text-5xl font-bold font-palanquin tracking-wide transition-colors duration-300 ${
+              <h3 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
                 theme === 'light' ? 'text-gray-900' : 'text-white'
               }`}>
                 {header.title}
               </h3>
             </div>
-            <p className={`max-w-md text-sm sm:text-base transition-colors duration-300 ${
+            <div className={`w-24 h-1 mx-auto rounded-full mb-6 transition-colors duration-300 ${
+              theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
+            }`} />
+            <p className={`text-lg sm:text-xl max-w-2xl mx-auto transition-colors duration-300 ${
               theme === 'light' ? 'text-gray-600' : 'text-gray-400'
             }`}>
               {header.description}
@@ -52,22 +55,24 @@ const FooterSection = () => {
           </motion.div>
 
           {/* Contact Links */}
-          <div className="w-full max-w-3xl mb-8 sm:mb-16 px-4">
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 justify-center">
+          <div className="w-full mb-12 sm:mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto px-4 sm:px-0">
               {contactLinks.map((link, index) => (
                 <motion.div
                   key={link.id}
-                  className="w-full sm:w-auto"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="w-full flex justify-center md:justify-stretch"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
                   transition={{
                     duration: 0.5,
-                    delay: index * 0.1
+                    delay: index * 0.15,
+                    ease: "easeOut"
                   }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
-                  <ContactLink {...link} />
+                  <div className="w-full max-w-sm md:max-w-none">
+                    <ContactLink {...link} />
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -75,17 +80,17 @@ const FooterSection = () => {
 
           {/* Divider */}
           <motion.div
-            className={`w-full max-w-md h-px mb-6 sm:mb-12 transition-colors duration-300 ${
-              theme === 'light' ? 'bg-gray-300' : 'bg-gray-800'
+            className={`w-full max-w-2xl h-px mb-8 sm:mb-12 transition-colors duration-300 ${
+              theme === 'light' ? 'bg-gray-200' : 'bg-gray-800'
             }`}
             initial={{ width: 0 }}
             whileInView={{ width: '100%' }}
             transition={{ duration: 0.6, delay: 0.4 }}
           />
 
-          {/* Credit - Added padding bottom to ensure visibility above navigation */}
+          {/* Credit */}
           <motion.div
-            className="text-center px-2 pb-16 sm:pb-20" // Added significant bottom padding
+            className="text-center px-2 pb-16 sm:pb-20"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -96,9 +101,9 @@ const FooterSection = () => {
               {credit.text}
               <motion.span
                 className={`font-semibold hover:underline cursor-pointer pl-1 sm:pl-2 transition-colors duration-300 ${
-                  theme === 'light' ? 'text-blue-600' : 'text-sky-400'
+                  theme === 'light' ? 'text-blue-600' : 'text-teal-400'
                 }`}
-                whileHover={{ scale: 1.05, color: theme === 'light' ? '#2563eb' : '#60D668' }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {credit.name}

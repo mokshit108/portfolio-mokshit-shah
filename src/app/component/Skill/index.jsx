@@ -13,45 +13,59 @@ const SkillsSection = () => {
   return (
     <motion.section
       id="skills"
-      className={`pt-0 pb-2 sm:pb-6 md:pb-8 lg:pb-6 2xl:pb-4 border-b-2 transition-colors duration-300 ${
+      className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
         theme === 'light' 
-          ? 'bg-white border-gray-300' 
-          : 'bg-[#001a33] border-gray-600'
+          ? 'bg-gradient-to-b from-gray-50 to-white' 
+          : 'bg-gradient-to-b from-[#000d1a] to-[#001a33]'
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="container mx-auto px-3 sm:px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
-          className="flex items-center gap-2 sm:gap-4 justify-center mt-0 mb-6 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 2xl:mt-2 2xl:mb-12"
+          className="text-center mb-12 sm:mb-20"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <FontAwesomeIcon
-            icon={faCode}
-            className={`w-8 h-8 sm:w-12 sm:h-12 transition-colors duration-300 ${
-              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
-            }`}
-          />
-          <h2 className={`text-3xl sm:text-5xl font-bold tracking-wide font-palanquin transition-colors duration-300 ${
-            theme === 'light' ? 'text-gray-900' : 'text-white'
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+            <FontAwesomeIcon
+              icon={faCode}
+              className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
+                theme === 'light' ? 'text-blue-600' : 'text-teal-400'
+              }`}
+            />
+            <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
+              theme === 'light' ? 'text-gray-900' : 'text-white'
+            }`}>
+              Skills
+            </h2>
+          </div>
+          <div className={`w-24 h-1 mx-auto rounded-full mb-6 transition-colors duration-300 ${
+            theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
+          }`} />
+          <p className={`text-lg sm:text-xl max-w-2xl mx-auto transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-600' : 'text-gray-400'
           }`}>
-            Skills
-          </h2>
+            Technologies and tools I work with
+          </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mt-0 mb-4 px-4 sm:gap-3 md:gap-4 sm:px-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: Math.min(index * 0.1, 1) }}
-              className="transform scale-50 sm:scale-85 md:scale-100"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.5,
+                delay: Math.min(index * 0.05, 0.8),
+                ease: "easeOut"
+              }}
             >
               <SkillCard skill={skill} />
             </motion.div>

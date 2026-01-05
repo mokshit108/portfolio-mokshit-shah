@@ -11,42 +11,58 @@ const ExperienceSection = () => {
   
   return (
     <motion.section
-      className={`py-8 md:py-16 min-h-screen border-b-2 transition-colors duration-300 ${
+      className={`py-12 sm:py-20 min-h-screen transition-colors duration-300 ${
         theme === 'light' 
-          ? 'bg-white border-gray-300' 
-          : 'bg-[#001a33] border-gray-600'
+          ? 'bg-gradient-to-b from-white to-gray-50' 
+          : 'bg-gradient-to-b from-[#001a33] to-[#000d1a]'
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        {/* Section Header */}
         <motion.div
-          className="flex items-center justify-center gap-2 md:gap-4 mb-8 md:mb-16"
+          className="text-center mb-12 sm:mb-20"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <FontAwesomeIcon
-            icon={faBriefcase}
-            className={`w-6 h-6 md:w-10 md:h-10 transition-colors duration-300 ${
-              theme === 'light' ? 'text-blue-600' : 'text-teal-500'
-            }`}
-          />
-          <h2 className={`text-3xl md:text-5xl font-bold tracking-wide font-palanquin transition-colors duration-300 ${
-            theme === 'light' ? 'text-gray-900' : 'text-white'
-          }`}>Experience</h2>
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+            <FontAwesomeIcon
+              icon={faBriefcase}
+              className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
+                theme === 'light' ? 'text-blue-600' : 'text-teal-400'
+              }`}
+            />
+            <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
+              theme === 'light' ? 'text-gray-900' : 'text-white'
+            }`}>
+              Experience
+            </h2>
+          </div>
+          <div className={`w-24 h-1 mx-auto rounded-full transition-colors duration-300 ${
+            theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
+          }`} />
+          <p className={`mt-6 text-lg sm:text-xl max-w-2xl mx-auto transition-colors duration-300 ${
+            theme === 'light' ? 'text-gray-600' : 'text-gray-400'
+          }`}>
+            My professional journey and work experience
+          </p>
         </motion.div>
 
+        {/* Experience Cards */}
         <div className="relative">
           {experienceData.experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.1
+                delay: index * 0.15,
+                ease: "easeOut"
               }}
             >
               <ExperienceCard {...experience} />
