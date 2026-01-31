@@ -21,12 +21,26 @@
         },
         {
           "name": "CerebVision"
+        },
+        {
+          "name": "Discovery"
+        },
+        {
+          "name": "Discovery Version 2 UI Update"
         }
       ],
       "projectExplanations": [
         {
           "name": "CerebVision",
           "explanation": "Developed a dynamic case upload system allowing users to upload videos via local file system, DVR integration, or webcam capture. Implemented a case management interface to list uploaded cases with an interactive thumbnail preview and modal popup functionality for quick content review. Built a responsive video analytics dashboard with a collapsible left sidebar for object palette and a right sidebar for image preview. Engineered bounding box detection for objects in video streams with checkbox-controlled timeline highlights, syncing object appearance time to the video player. Designed a timeline-linked video interaction system: clicking on detected object instances in the timeline dynamically seeks the video to the corresponding timestamp. Used React.js, Tailwind CSS, and video.js for seamless UI/UX and video rendering capabilities."
+        },
+        {
+          "name": "Discovery",
+          "explanation": "Built an interactive real-time location tracking system using Leaflet.js, featuring animated journey paths, timeline playback, and auto-adjusting map bounds. Implemented heatmap and marker clustering with intensity-based color coding and custom cluster icons for clear spatial pattern analysis. Designed a timeline control panel with playback controls, speed options, slider navigation, and automatic date-range handling for location data. Developed a location details sidebar displaying coordinates, timestamps, addresses, and evidence-related actions with smooth UI animations. Added advanced map utilities including GeoJSON overlays, custom markers, location search, route visualization, and report-ready map screenshots. Built a fully responsive drag-and-drop dashboard using React Grid Layout with synchronized layouts across all screen breakpoints. Integrated an AI-powered chatbot that converts natural language queries into auto-generated data visualizations added directly to the dashboard. Developed an interactive dashboard editor with dynamic dimension/metric loading and drag-and-drop zones for axes, pivots, filters, and charts. Implemented a data transformation and analytics engine supporting pivoted datasets, time-series analysis, statistical functions, and dynamic theming. Enabled end-to-end chart management with persistent storage, advanced filtering, and multi-format exports (PNG, CSV, JSON)."
+        },
+        {
+          "name": "Discovery Version 2 UI Update",
+          "explanation": "Built an interactive timeline visualization with multi-level zoom (quarter/month/week), drag-to-pan navigation, and smooth temporal analysis controls. Modernized the application UI using React 19, TypeScript, and Tailwind CSS, replacing legacy components with a responsive, maintainable design system. Implemented advanced graph visualizations using Memgraph Orb and Plotly.js to explore complex forensic relationships with interactive filtering and detail sidebars. Developed reusable UI components including data tables, filter panels, modals, and drag-and-drop evidence uploads for consistent UX. Optimized performance and data handling with React hooks, virtual scrolling, efficient state management, and integrated geolocation mapping with charts for investigative insights."
         }
       ]
     },

@@ -27,7 +27,28 @@ const ExperienceCard = ({
 }) => {
   const year = period.split(" ").pop();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [expandedExplanations, setExpandedExplanations] = useState({});
   const { theme } = useTheme();
+
+  // Function to get first 80 words
+  const getFirst80Words = (text) => {
+    const words = text.split(" ");
+    if (words.length <= 80) return text;
+    return words.slice(0, 80).join(" ") + "...";
+  };
+
+  // Function to check if text is longer than 80 words
+  const isLongText = (text) => {
+    return text.split(" ").length > 80;
+  };
+
+  // Toggle expand/collapse for a specific explanation
+  const toggleExplanation = (idx) => {
+    setExpandedExplanations((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
 
   return (
     <div className="relative flex flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16">
@@ -234,20 +255,42 @@ const ExperienceCard = ({
                   }`}>Project Explanations</h4>
                 </div>
                 <div className="space-y-3 md:space-y-4">
-                  {projectExplanations.map((proj, idx) => (
-                    <div key={idx} className={`rounded-lg p-4 md:p-5 transition-all duration-300 border shadow-sm hover:shadow-md ${
-                      theme === 'light' 
-                        ? 'bg-blue-50 border-blue-100 hover:border-blue-300' 
-                        : 'bg-gray-800/60 border-gray-700 hover:border-gray-600'
-                    }`}>
-                      <div className={`font-semibold text-sm md:text-base mb-2 transition-colors duration-300 ${
-                        theme === 'light' ? 'text-blue-700' : 'text-teal-400'
-                      }`}>{proj.name}</div>
-                      <div className={`text-sm md:text-base leading-relaxed transition-colors duration-300 ${
-                        theme === 'light' ? 'text-gray-700' : 'text-gray-300'
-                      }`}>{proj.explanation}</div>
-                    </div>
-                  ))}
+                  {projectExplanations.map((proj, idx) => {
+                    const isExpanded = expandedExplanations[idx];
+                    const isLong = isLongText(proj.explanation);
+                    const displayText = isExpanded || !isLong 
+                      ? proj.explanation 
+                      : getFirst80Words(proj.explanation);
+
+                    return (
+                      <div key={idx} className={`rounded-lg p-4 md:p-5 transition-all duration-300 border shadow-sm hover:shadow-md ${
+                        theme === 'light' 
+                          ? 'bg-blue-50 border-blue-100 hover:border-blue-300' 
+                          : 'bg-gray-800/60 border-gray-700 hover:border-gray-600'
+                      }`}>
+                        <div className={`font-semibold text-sm md:text-base mb-2 transition-colors duration-300 ${
+                          theme === 'light' ? 'text-blue-700' : 'text-teal-400'
+                        }`}>{proj.name}</div>
+                        <div className={`text-sm md:text-base leading-relaxed transition-colors duration-300 ${
+                          theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+                        }`}>
+                          {displayText}
+                        </div>
+                        {isLong && (
+                          <button
+                            onClick={() => toggleExplanation(idx)}
+                            className={`mt-3 text-sm font-medium transition-all duration-300 hover:underline ${
+                              theme === 'light' 
+                                ? 'text-blue-600 hover:text-blue-800' 
+                                : 'text-teal-400 hover:text-teal-300'
+                            }`}
+                          >
+                            {isExpanded ? 'Show less' : '...more'}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
