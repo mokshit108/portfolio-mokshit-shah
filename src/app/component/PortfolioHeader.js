@@ -58,9 +58,10 @@ const PortfolioHeader = () => {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16">
-          {/* Left Content */}
-          <div className="flex-1 space-y-5 sm:space-y-6 lg:space-y-8 text-center md:text-left">
+        {/* Top Row: Left (Developer Info) and Right (Image) */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12">
+          {/* Left Content - Developer Info */}
+          <div className="flex-1 space-y-5 sm:space-y-6 lg:space-y-8 text-center md:text-left w-full md:w-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,24 +87,13 @@ const PortfolioHeader = () => {
                 <span className="animate-pulse ml-1">|</span>
               </h2>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <p className={`text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 max-w-2xl mx-auto md:mx-0 ${
-                theme === 'light' ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                {personalInfo.description}
-              </p>
-            </motion.div>
           </div>
 
-          {/* Right Content - Profile Image and CTA */}
-          <div className="flex flex-col items-center gap-8 sm:gap-10">
+          {/* Right Content - Profile Image */}
+          <div className="flex-shrink-0 flex flex-col items-center gap-4 sm:gap-6">
+            {/* Profile Image */}
             <motion.div
-              className="flex-shrink-0 mb-2 sm:mb-8 sm:mr-8"
+              className="flex-shrink-0 -mt-12 sm:-mt-16 lg:-mt-20"
               animate={{
                 y: [0, -10, 0],
               }}
@@ -127,10 +117,10 @@ const PortfolioHeader = () => {
 
             {/* Social Media Icons */}
             <motion.div
-              className="flex items-center justify-center gap-5 sm:gap-6 mt-4"
+              className="flex items-center justify-center gap-5 sm:gap-6 mt-8 sm:mt-10 lg:mt-12 ml-14 sm:ml-16 lg:ml-18"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <a 
                 href="https://www.linkedin.com/in/mokshit-shah-4493321a7/" 
@@ -174,37 +164,53 @@ const PortfolioHeader = () => {
                 </svg>
               </a>
             </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <a
-                href="/assets/Resume_MokshitShah.pdf"
-                download
-                className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download CV
-              </a>
-              <a
-                href="#contact"
-                className={`px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 ${
-                  theme === 'light' 
-                    ? 'border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700' 
-                    : 'border-sky-400 text-sky-400 hover:bg-sky-500/10 hover:border-sky-300'
-                }`}
-              >
-                Let's Talk
-              </a>
-            </motion.div>
           </div>
         </div>
+
+        {/* Bottom Row: Description (Full Width) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="w-full -mt-4 sm:-mt-6 lg:-mt-8"
+        >
+          <p className={`text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left ${
+            theme === 'light' ? 'text-gray-600' : 'text-gray-300'
+          }`}>
+            {personalInfo.description}
+          </p>
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 md:mt-6 -mt-2 sm:-mt-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/assets/Resume_MokshitShah.pdf"
+              download
+              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download CV
+            </a>
+            <a
+              href="#contact"
+              className={`px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 ${
+                theme === 'light' 
+                  ? 'border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700' 
+                  : 'border-sky-400 text-sky-400 hover:bg-sky-500/10 hover:border-sky-300'
+              }`}
+            >
+              Let's Talk
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

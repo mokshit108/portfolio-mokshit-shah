@@ -28,18 +28,18 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
   // Get icon color based on type and theme
   const getIconColor = () => {
     if (isHovered) {
-      return theme === 'light' ? 'text-white' : 'text-white';
+      return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
     }
     switch (type) {
       case 'email':
-        return theme === 'light' ? 'text-blue-600' : 'text-blue-400';
+        return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
       case 'phone':
       case 'phone-whatsapp':
         return theme === 'light' ? 'text-green-600' : 'text-green-400';
       case 'whatsapp':
         return theme === 'light' ? 'text-green-600' : 'text-green-400';
       default:
-        return theme === 'light' ? 'text-blue-600' : 'text-blue-400';
+        return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
     }
   };
 
@@ -49,8 +49,8 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
       switch (type) {
         case 'email':
           return theme === 'light' 
-            ? 'bg-gradient-to-br from-blue-600 to-blue-700' 
-            : 'bg-gradient-to-br from-blue-500 to-blue-600';
+            ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
+            : 'bg-gradient-to-br from-teal-500 to-teal-600';
         case 'phone':
         case 'phone-whatsapp':
           return theme === 'light' 
@@ -62,8 +62,8 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
             : 'bg-gradient-to-br from-green-500 to-green-600';
         default:
           return theme === 'light' 
-            ? 'bg-gradient-to-br from-blue-600 to-blue-700' 
-            : 'bg-gradient-to-br from-blue-500 to-blue-600';
+            ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
+            : 'bg-gradient-to-br from-teal-500 to-teal-600';
       }
     }
     return theme === 'light'
@@ -178,7 +178,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
         isHovered
           ? 'bg-white/20 scale-110'
           : theme === 'light'
-            ? 'bg-blue-50'
+            ? 'bg-teal-50'
             : 'bg-gray-800'
       }`}>
         <FontAwesomeIcon
@@ -215,7 +215,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
           : 'opacity-0'
       } ${
         type === 'email'
-          ? 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400'
+          ? 'bg-gradient-to-r from-teal-400 via-teal-600 to-teal-400'
           : 'bg-gradient-to-r from-green-400 via-green-600 to-green-400'
       }`} />
 

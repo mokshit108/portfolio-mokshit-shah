@@ -2,7 +2,7 @@
     "personalInfo": {
       "name": "Mokshit Shah",
       "title": "Software Developer",
-      "description": "Full-stack developer with expertise in React, Next.js, and Node.js, currently working at CerebralZip company. Proficient in creating responsive user interfaces using modern frameworks. Passionate about building efficient, user-friendly applications that solve real-world problems",
+      "description": "Full-Stack Developer with a strong foundation in React, Next.js, Node.js, and modern web technologies.Currently building advanced video analytics solutions at CerebralZip, including object-tracking and timeline-driven interfaces. I specialize in crafting responsive, user-centric UIs and scalable backend systems that solve real business problems.Experienced in delivering production-ready applications, integrating APIs, optimizing performance, and maintaining clean, maintainable code. Passionate about clean architecture, performance optimization, and continuous improvement, with a strong focus on creating reliable products and great user experiences.",
       "profileImage": {
         "src": "/assets/photo_img.jpg",
         "alt": "Your Profile"

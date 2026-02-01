@@ -32,7 +32,7 @@ const ExperienceSection = () => {
             <FontAwesomeIcon
               icon={faBriefcase}
               className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
-                theme === 'light' ? 'text-blue-600' : 'text-teal-400'
+                theme === 'light' ? 'text-teal-600' : 'text-teal-400'
               }`}
             />
             <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
@@ -42,7 +42,7 @@ const ExperienceSection = () => {
             </h2>
           </div>
           <div className={`w-24 h-1 mx-auto rounded-full transition-colors duration-300 ${
-            theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
+            theme === 'light' ? 'bg-teal-600' : 'bg-teal-500'
           }`} />
           <p className={`mt-6 text-lg sm:text-xl max-w-2xl mx-auto transition-colors duration-300 ${
             theme === 'light' ? 'text-gray-600' : 'text-gray-400'
