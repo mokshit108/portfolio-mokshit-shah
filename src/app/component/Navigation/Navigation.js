@@ -33,7 +33,7 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="fixed bottom-3 min-[375px]:bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-1.5 min-[375px]:px-2 sm:px-4 md:px-7 py-1.5 min-[375px]:py-2 sm:py-2.5 md:py-3 z-20 rounded-full backdrop-blur-md gap-1 min-[375px]:gap-1.5 sm:gap-2 md:gap-3 max-w-[98vw] min-[375px]:max-w-[95vw] sm:max-w-none overflow-x-auto">
+    <nav className="fixed bottom-3 min-[375px]:bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-1.5 min-[375px]:px-2 sm:px-4 md:px-7 py-1.5 min-[375px]:py-2 sm:py-2.5 md:py-3 z-20 rounded-full backdrop-blur-md gap-1 min-[375px]:gap-1.5 sm:gap-2 md:gap-3 max-w-[calc(100vw-16px)] min-[375px]:max-w-[calc(100vw-20px)] sm:max-w-none overflow-x-hidden">
       {navItems.map((item) => (
         <Link
           key={item.href}

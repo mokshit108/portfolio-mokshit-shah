@@ -23,7 +23,7 @@ const ProjectSection = () => {
       viewport={{ once: false, margin: "-100px" }}
       transition={{ duration: 0.7 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"

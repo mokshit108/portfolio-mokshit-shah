@@ -21,7 +21,7 @@ const ExperienceSection = () => {
       viewport={{ once: false, margin: "-100px" }}
       transition={{ duration: 0.7 }}
     >
-      <div className="container mx-auto px-3 min-[375px]:px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto px-3 min-[375px]:px-4 sm:px-6 lg:px-8 max-w-6xl overflow-x-hidden">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
