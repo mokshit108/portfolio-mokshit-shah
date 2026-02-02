@@ -64,12 +64,14 @@ const PortfolioHeader = () => {
           <motion.div 
             className="flex-1 space-y-5 sm:space-y-6 lg:space-y-8 text-center md:text-left w-full md:w-auto"
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-acme transition-colors duration-300 ${
@@ -81,7 +83,8 @@ const PortfolioHeader = () => {
 
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-palanquin min-h-[40px] sm:min-h-[50px] transition-colors duration-300 ${
@@ -98,18 +101,20 @@ const PortfolioHeader = () => {
           <motion.div 
             className="flex-shrink-0 flex flex-col items-center gap-4 sm:gap-6"
             initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Profile Image */}
             <motion.div
               className="flex-shrink-0 -mt-12 sm:-mt-16 lg:-mt-20"
               initial={{ opacity: 0, x: 50 }}
-              animate={{ 
+              whileInView={{ 
                 opacity: 1, 
                 x: 0,
                 y: [0, -10, 0],
               }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{
                 x: { duration: 0.6, delay: 0.1 },
                 y: {
@@ -125,7 +130,8 @@ const PortfolioHeader = () => {
                   alt={personalInfo.profileImage.alt}
                   className="rounded-full object-cover m-4 sm:m-6 lg:m-10 shadow-lg ring-4 ring-blue-500"
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: false, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 />
               </div>
@@ -135,7 +141,8 @@ const PortfolioHeader = () => {
             <motion.div
               className="flex items-center justify-center gap-5 sm:gap-6 mt-8 sm:mt-10 lg:mt-12 ml-14 sm:ml-16 lg:ml-18"
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <a 
@@ -186,7 +193,8 @@ const PortfolioHeader = () => {
         {/* Bottom Row: Description (Full Width) */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="w-full -mt-4 sm:-mt-6 lg:-mt-8"
         >
@@ -201,7 +209,8 @@ const PortfolioHeader = () => {
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 md:mt-6 -mt-2 sm:-mt-4"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
           <div className="flex flex-col sm:flex-row gap-4">

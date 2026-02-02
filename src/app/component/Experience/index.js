@@ -18,6 +18,7 @@ const ExperienceSection = () => {
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      viewport={{ once: false, margin: "-100px" }}
       transition={{ duration: 0.7 }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
@@ -26,6 +27,7 @@ const ExperienceSection = () => {
           className="text-center mb-12 sm:mb-20"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
@@ -60,7 +62,7 @@ const ExperienceSection = () => {
               key={experience.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.15,
