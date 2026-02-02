@@ -27,10 +27,10 @@ const EducationSection = () => {
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
             <FontAwesomeIcon
@@ -68,7 +68,7 @@ const EducationSection = () => {
           {educationData.educationData.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-100px" }}
               transition={{
