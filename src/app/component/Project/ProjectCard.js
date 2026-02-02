@@ -14,9 +14,11 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
   return (
     <div 
       className={`group relative border rounded-xl overflow-hidden transition-all duration-500 ${
+        isHovered ? '-translate-y-6 scale-105' : 'translate-y-0 scale-100'
+      } ${
         theme === 'light'
-          ? 'bg-white border-gray-200 shadow-md hover:shadow-2xl hover:border-blue-400'
-          : 'bg-gradient-to-br from-gray-900 to-black border-gray-800 shadow-lg hover:shadow-2xl hover:border-teal-500/60'
+          ? `bg-white border-gray-200 shadow-md ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-400`
+          : `bg-gradient-to-br from-gray-900 to-black border-gray-800 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-teal-500/60`
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

@@ -27,10 +27,10 @@ const ProjectSection = () => {
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
             <FontAwesomeIcon
@@ -59,21 +59,42 @@ const ProjectSection = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: "easeOut"
-              }}
-            >
-              <ProjectCard {...project} />
-            </motion.div>
-          ))}
+          {projects.map((project, index) => {
+            // Determine animation direction based on position in row (0, 1, 2)
+            const positionInRow = index % 3;
+            let initialX = 0;
+            let initialY = 0;
+            
+            if (positionInRow === 0) {
+              // 1st card: left to right
+              initialX = -100;
+              initialY = 0;
+            } else if (positionInRow === 1) {
+              // 2nd card: top to bottom
+              initialX = 0;
+              initialY = -50;
+            } else {
+              // 3rd card: right to left
+              initialX = 100;
+              initialY = 0;
+            }
+            
+            return (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, x: initialX, y: initialY }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+              >
+                <ProjectCard {...project} />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </motion.div>
