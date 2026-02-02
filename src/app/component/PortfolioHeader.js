@@ -35,7 +35,7 @@ const PortfolioHeader = () => {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <div className={`min-h-screen relative overflow-x-hidden flex items-center py-12 sm:py-16 lg:py-20 transition-colors duration-300 w-full ${
+    <div className={`min-h-screen relative overflow-x-hidden flex items-center py-8 min-[375px]:py-10 sm:py-12 md:py-16 lg:py-20 transition-colors duration-300 w-full ${
       theme === 'light' ? 'bg-gradient-to-br from-white via-gray-50 to-white' : 'bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#1e3a8a]'
     }`}>
       {/* Background Image - only show in dark theme */}
@@ -57,12 +57,12 @@ const PortfolioHeader = () => {
       )}
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full relative z-10">
         {/* Top Row: Left (Developer Info) and Right (Image) */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 mb-6 sm:mb-8 md:mb-12">
           {/* Left Content - Developer Info */}
-          <motion.div 
-            className="flex-1 space-y-5 sm:space-y-6 lg:space-y-8 text-center md:text-left w-full md:w-auto"
+            <motion.div 
+            className="flex-1 space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-8 text-center md:text-left w-full md:w-auto"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, margin: "-100px" }}
@@ -74,7 +74,7 @@ const PortfolioHeader = () => {
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-acme transition-colors duration-300 break-words ${
+              <h1 className={`text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-acme transition-colors duration-300 break-words px-1 sm:px-0 ${
                 theme === 'light' ? 'text-gray-900' : 'text-white'
               }`}>
                 {personalInfo.name}
@@ -87,10 +87,10 @@ const PortfolioHeader = () => {
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-palanquin min-h-[32px] sm:min-h-[40px] md:min-h-[50px] transition-colors duration-300 break-words ${
+              <h2 className={`text-lg min-[375px]:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-palanquin min-h-[28px] min-[375px]:min-h-[32px] sm:min-h-[40px] md:min-h-[50px] transition-colors duration-300 break-words px-1 sm:px-0 ${
                 theme === 'light' ? 'text-blue-600' : 'text-sky-400'
               }`}>
-                <span className="mr-2 sm:mr-4">I'm</span>
+                <span className="mr-1.5 sm:mr-2 md:mr-4">I'm</span>
                 {displayText}
                 <span className="animate-pulse ml-1">|</span>
               </h2>
@@ -107,7 +107,7 @@ const PortfolioHeader = () => {
           >
             {/* Profile Image */}
             <motion.div
-              className="flex-shrink-0 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20"
+              className="flex-shrink-0 -mt-4 min-[375px]:-mt-6 sm:-mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ 
                 opacity: 1, 
@@ -124,11 +124,11 @@ const PortfolioHeader = () => {
                 }
               }}
             >
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
+              <div className="w-24 h-24 min-[375px]:w-28 min-[375px]:h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56">
                 <motion.img
                   src={personalInfo.profileImage.src}
                   alt={personalInfo.profileImage.alt}
-                  className="rounded-full object-cover m-2 sm:m-4 md:m-6 lg:m-10 shadow-lg ring-2 sm:ring-4 ring-blue-500"
+                  className="rounded-full object-cover m-1.5 min-[375px]:m-2 sm:m-3 md:m-4 lg:m-6 xl:m-10 shadow-lg ring-1.5 min-[375px]:ring-2 sm:ring-3 md:ring-4 ring-blue-500"
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: false, margin: "-100px" }}
@@ -139,7 +139,7 @@ const PortfolioHeader = () => {
 
             {/* Social Media Icons */}
             <motion.div
-              className="flex items-center justify-center gap-3 sm:gap-5 md:gap-6 mt-4 sm:mt-6 md:mt-8 lg:mt-12"
+              className="flex items-center justify-center gap-2 min-[375px]:gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-2 min-[375px]:mt-3 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-12"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, margin: "-100px" }}
@@ -150,39 +150,39 @@ const PortfolioHeader = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn"
-                className={`p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 ${
+                className={`p-2 min-[375px]:p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 min-w-[36px] min-h-[36px] min-[375px]:min-w-[40px] min-[375px]:min-h-[40px] flex items-center justify-center ${
                   theme === 'light' 
                     ? 'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:shadow-md' 
                     : 'bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 hover:shadow-lg hover:shadow-sky-500/20'
                 }`}
               >
-                <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.792 0 0 .77 0 1.724v20.551C0 23.228.792 24 1.77 24h20.459C23.208 24 24 23.228 24 22.275V1.724C24 .77 23.208 0 22.23 0zM7.09 20.452H3.677V9.034H7.09v11.418zm-1.707-13.01a2.013 2.013 0 01-2.018-2.02A2.012 2.012 0 015.377 3.4c1.115 0 2.018.903 2.018 2.021a2.013 2.013 0 01-2.018 2.021zm14.262 13.01h-3.413v-5.604c0-1.337-.024-3.06-1.866-3.06-1.868 0-2.154 1.457-2.154 2.963v5.701H8.799V9.034H12v1.561h.049c.447-.847 1.539-1.74 3.165-1.74 3.386 0 4.012 2.23 4.012 5.127v6.47z" /></svg>
+                <svg className="w-5 h-5 min-[375px]:w-6 min-[375px]:h-6 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.792 0 0 .77 0 1.724v20.551C0 23.228.792 24 1.77 24h20.459C23.208 24 24 23.228 24 22.275V1.724C24 .77 23.208 0 22.23 0zM7.09 20.452H3.677V9.034H7.09v11.418zm-1.707-13.01a2.013 2.013 0 01-2.018-2.02A2.012 2.012 0 015.377 3.4c1.115 0 2.018.903 2.018 2.021a2.013 2.013 0 01-2.018 2.021zm14.262 13.01h-3.413v-5.604c0-1.337-.024-3.06-1.866-3.06-1.868 0-2.154 1.457-2.154 2.963v5.701H8.799V9.034H12v1.561h.049c.447-.847 1.539-1.74 3.165-1.74 3.386 0 4.012 2.23 4.012 5.127v6.47z" /></svg>
               </a>
               <a 
                 href="https://github.com/mokshit108" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="GitHub"
-                className={`p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 ${
+                className={`p-2 min-[375px]:p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 min-w-[36px] min-h-[36px] min-[375px]:min-w-[40px] min-[375px]:min-h-[40px] flex items-center justify-center ${
                   theme === 'light' 
                     ? 'bg-gray-100 text-gray-900 hover:bg-gray-200 hover:shadow-md' 
                     : 'bg-gray-800/50 text-white hover:bg-gray-700 hover:shadow-lg'
                 }`}
               >
-                <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.426 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.109-1.462-1.109-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.22-.254-4.555-1.112-4.555-4.946 0-1.092.39-1.987 1.03-2.684-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.203 2.397.1 2.65.64.697 1.029 1.592 1.029 2.684 0 3.842-2.338 4.688-4.566 4.937.36.309.681.92.681 1.855 0 1.338-.013 2.419-.013 2.749 0 .268.18.579.688.481C19.138 20.203 22 16.446 22 12.021 22 6.484 17.523 2 12 2z" clipRule="evenodd" /></svg>
+                <svg className="w-5 h-5 min-[375px]:w-6 min-[375px]:h-6 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.426 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.109-1.462-1.109-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.22-.254-4.555-1.112-4.555-4.946 0-1.092.39-1.987 1.03-2.684-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.203 2.397.1 2.65.64.697 1.029 1.592 1.029 2.684 0 3.842-2.338 4.688-4.566 4.937.36.309.681.92.681 1.855 0 1.338-.013 2.419-.013 2.749 0 .268.18.579.688.481C19.138 20.203 22 16.446 22 12.021 22 6.484 17.523 2 12 2z" clipRule="evenodd" /></svg>
               </a>
               <a
                 href="https://drive.google.com/file/d/10mJUsm9VHLNQfNA1UPntA7Y1a44FXnBq/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Resume"
-                className={`p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 ${
+                className={`p-2 min-[375px]:p-2.5 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 min-w-[36px] min-h-[36px] min-[375px]:min-w-[40px] min-[375px]:min-h-[40px] flex items-center justify-center ${
                   theme === 'light' 
                     ? 'bg-teal-50 text-teal-600 hover:bg-teal-100 hover:shadow-md' 
                     : 'bg-teal-500/10 text-teal-400 hover:bg-teal-500/20 hover:shadow-lg hover:shadow-teal-500/20'
                 }`}
               >
-                <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-5 h-5 min-[375px]:w-6 min-[375px]:h-6 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM13 9V3.5L18.5 9H13zM8 13h8v2H8v-2zm0 4h5v2H8v-2z" />
                 </svg>
               </a>
@@ -198,7 +198,7 @@ const PortfolioHeader = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="w-full -mt-4 sm:-mt-6 lg:-mt-8"
         >
-          <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 sm:px-0 ${
+          <p className={`text-xs min-[375px]:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 min-[375px]:px-3 sm:px-0 ${
             theme === 'light' ? 'text-gray-600' : 'text-gray-300'
           }`}>
             {personalInfo.description}
@@ -207,17 +207,17 @@ const PortfolioHeader = () => {
 
         {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4 md:mt-6 -mt-2 sm:-mt-4 px-2 sm:px-0"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2.5 min-[375px]:gap-3 sm:gap-4 mt-3 min-[375px]:mt-4 sm:mt-6 md:mt-6 -mt-1 min-[375px]:-mt-2 sm:-mt-4 px-2 min-[375px]:px-3 sm:px-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-2.5 min-[375px]:gap-3 sm:gap-4 w-full sm:w-auto">
             <a
               href="/assets/Resume_MokshitShah.pdf"
               download
-              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px]"
+              className="px-4 min-[375px]:px-5 sm:px-6 md:px-8 py-2.5 min-[375px]:py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-1.5 min-[375px]:gap-2 text-xs min-[375px]:text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[40px] min-[375px]:min-h-[44px]"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -226,7 +226,7 @@ const PortfolioHeader = () => {
             </a>
             <a
               href="#contact"
-              className={`px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px] ${
+              className={`px-4 min-[375px]:px-5 sm:px-6 md:px-8 py-2.5 min-[375px]:py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-xs min-[375px]:text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[40px] min-[375px]:min-h-[44px] ${
                 theme === 'light' 
                   ? 'border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700' 
                   : 'border-sky-400 text-sky-400 hover:bg-sky-500/10 hover:border-sky-300'

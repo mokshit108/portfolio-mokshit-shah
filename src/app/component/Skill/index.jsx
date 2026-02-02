@@ -13,7 +13,7 @@ const SkillsSection = () => {
   return (
     <motion.section
       id="skills"
-      className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+      className={`py-8 min-[375px]:py-10 sm:py-12 md:py-20 px-3 min-[375px]:px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
         theme === 'light' 
           ? 'bg-gradient-to-b from-gray-50 to-white' 
           : 'bg-gradient-to-b from-[#000d1a] to-[#001a33]'

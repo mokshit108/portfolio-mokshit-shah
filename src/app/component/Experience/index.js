@@ -11,7 +11,7 @@ const ExperienceSection = () => {
   
   return (
     <motion.section
-      className={`py-12 sm:py-20 min-h-screen transition-colors duration-300 ${
+      className={`py-8 min-[375px]:py-10 sm:py-12 md:py-20 min-h-screen transition-colors duration-300 ${
         theme === 'light' 
           ? 'bg-gradient-to-b from-white to-gray-50' 
           : 'bg-gradient-to-b from-[#001a33] to-[#000d1a]'
@@ -21,7 +21,7 @@ const ExperienceSection = () => {
       viewport={{ once: false, margin: "-100px" }}
       transition={{ duration: 0.7 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto px-3 min-[375px]:px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"

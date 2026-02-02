@@ -8,7 +8,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`fixed top-4 right-4 sm:top-6 sm:right-6 z-50 p-2.5 sm:p-3 rounded-full backdrop-blur-md transition-all duration-300 shadow-lg hover:scale-110 active:scale-95 min-w-[44px] min-h-[44px] flex items-center justify-center ${
+      className={`fixed top-3 right-3 min-[375px]:top-4 min-[375px]:right-4 sm:top-6 sm:right-6 z-50 p-2 min-[375px]:p-2.5 sm:p-3 rounded-full backdrop-blur-md transition-all duration-300 shadow-lg hover:scale-110 active:scale-95 min-w-[36px] min-h-[36px] min-[375px]:min-w-[40px] min-[375px]:min-h-[40px] sm:min-w-[44px] sm:min-h-[44px] flex items-center justify-center ${
         theme === 'light' 
           ? 'bg-white/90 hover:bg-white border-2 border-gray-300 shadow-xl' 
           : 'bg-gray-900/90 hover:bg-gray-800 border-2 border-gray-700 shadow-xl'
@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       {theme === 'light' ? (
         // Moon icon - click to switch to dark mode
         <svg
-          className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
+          className="w-4 h-4 min-[375px]:w-5 min-[375px]:h-5 sm:w-6 sm:h-6 text-gray-800"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ const ThemeToggle = () => {
       ) : (
         // Sun icon - click to switch to light mode
         <svg
-          className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400"
+          className="w-4 h-4 min-[375px]:w-5 min-[375px]:h-5 sm:w-6 sm:h-6 text-yellow-400"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
