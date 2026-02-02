@@ -38,7 +38,9 @@ const ProjectSection = () => {
               }`}
             />
             <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
-              theme === 'light' ? 'text-gray-900' : 'text-white'
+              theme === 'light' 
+                ? 'bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent' 
+                : 'bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent'
             }`}>
               {sectionTitle}
             </h2>

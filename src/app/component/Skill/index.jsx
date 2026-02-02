@@ -26,9 +26,10 @@ const SkillsSection = () => {
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
             <FontAwesomeIcon
@@ -38,7 +39,9 @@ const SkillsSection = () => {
               }`}
             />
             <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
-              theme === 'light' ? 'text-gray-900' : 'text-white'
+              theme === 'light' 
+                ? 'bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent' 
+                : 'bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent'
             }`}>
               Skills
             </h2>
@@ -58,12 +61,12 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -100, y: -100 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{
-                duration: 0.5,
-                delay: Math.min(index * 0.05, 0.8),
+                duration: 0.6,
+                delay: index * 0.08,
                 ease: "easeOut"
               }}
             >
