@@ -24,7 +24,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image Container with Overlay */}
-      <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+      <div className="relative h-40 sm:h-48 md:h-56 w-full overflow-hidden">
         <img
           src={imageSrc}
           alt={title}
@@ -58,10 +58,10 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/90 hover:bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-110 flex items-center gap-2 shadow-lg"
+              className="bg-white/90 hover:bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-semibold transition-all duration-300 hover:scale-110 flex items-center gap-2 shadow-lg text-sm sm:text-base min-h-[44px]"
             >
-              <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4" />
-              <span>Live Demo</span>
+              <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+              <span className="whitespace-nowrap">Live Demo</span>
             </a>
           )}
           {githubLink && (
@@ -69,34 +69,34 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/90 hover:bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-110 flex items-center gap-2 shadow-lg"
+              className="bg-white/90 hover:bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-semibold transition-all duration-300 hover:scale-110 flex items-center gap-2 shadow-lg text-sm sm:text-base min-h-[44px]"
             >
-              <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-              <span>Code</span>
+              <FontAwesomeIcon icon={faGithub} className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+              <span className="whitespace-nowrap">Code</span>
             </a>
           )}
         </div>
       </div>
 
       {/* Content */}
-      <div className={`p-5 sm:p-6 transition-colors duration-300 ${
+      <div className={`p-4 sm:p-5 md:p-6 transition-colors duration-300 ${
         theme === 'light' ? 'bg-white' : 'bg-gradient-to-br from-gray-900 to-black'
       }`}>
-        <h3 className={`text-xl sm:text-2xl font-bold mb-3 transition-colors duration-300 ${
+        <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 transition-colors duration-300 break-words ${
           theme === 'light' ? 'text-gray-900' : 'text-white'
         }`}>
           {title}
         </h3>
 
-        <ul className="mb-5 sm:mb-6 space-y-2">
+        <ul className="mb-4 sm:mb-5 md:mb-6 space-y-2">
           {description.map((desc, index) => (
-            <li key={index} className={`text-sm sm:text-base leading-relaxed flex gap-3 transition-colors duration-300 ${
+            <li key={index} className={`text-xs sm:text-sm md:text-base leading-relaxed flex gap-2 sm:gap-3 transition-colors duration-300 ${
               theme === 'light' ? 'text-gray-600' : 'text-gray-300'
             }`}>
               <span className={`flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
                 theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
               }`} />
-              <span className="flex-1">{desc}</span>
+              <span className="flex-1 break-words">{desc}</span>
             </li>
           ))}
         </ul>
@@ -117,7 +117,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
             {techStack.map((tech, index) => (
               <span
                 key={index}
-                className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-md transition-all duration-300 ${
+                className={`px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium rounded-md transition-all duration-300 whitespace-nowrap ${
                   theme === 'light'
                     ? 'bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100'
                     : 'bg-gray-800 text-teal-300 border border-gray-700 hover:bg-gray-700'
@@ -130,7 +130,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
         </div>
 
         {/* Footer Links */}
-        <div className={`flex items-center justify-end gap-4 mt-5 pt-4 border-t transition-colors duration-300 ${
+        <div className={`flex items-center justify-center sm:justify-end gap-3 sm:gap-4 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t transition-colors duration-300 flex-wrap ${
           theme === 'light' ? 'border-gray-200' : 'border-gray-800'
         }`}>
           {liveLink && (
@@ -138,14 +138,14 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 min-h-[40px] sm:min-h-[44px] ${
                 theme === 'light'
                   ? 'text-blue-600 hover:bg-blue-50 hover:text-blue-700'
                   : 'text-teal-400 hover:bg-gray-800 hover:text-teal-300'
               }`}
             >
-              <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4" />
-              <span>View Live</span>
+              <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+              <span className="whitespace-nowrap">View Live</span>
             </a>
           )}
 
@@ -154,7 +154,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 min-h-[40px] sm:min-h-[44px] ${
                 theme === 'light'
                   ? 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
                   : 'text-gray-300 hover:bg-gray-800 hover:text-white'

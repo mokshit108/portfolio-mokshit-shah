@@ -40,7 +40,7 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => {
               alt={alt}
               width={80}
               height={80}
-              className={`relative rounded-lg object-contain transition-transform duration-500 ${
+              className={`relative rounded-lg object-contain transition-transform duration-500 w-16 h-16 sm:w-20 sm:h-20 ${
                 isHovered ? 'scale-110' : 'scale-100'
               }`}
             />
@@ -78,14 +78,14 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => {
       </div>
 
       {/* Right Section - Date Badge */}
-      <div className={`flex-shrink-0 w-full lg:w-auto lg:ml-4`}>
-        <div className={`inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 ${
+      <div className={`flex-shrink-0 w-full lg:w-auto lg:ml-4 flex justify-center lg:justify-start`}>
+        <div className={`inline-flex items-center justify-center px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold text-xs sm:text-sm md:text-base transition-all duration-300 whitespace-nowrap ${
           theme === 'light'
             ? 'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-md group-hover:shadow-lg group-hover:from-teal-700 group-hover:to-teal-800'
             : 'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-md group-hover:shadow-lg group-hover:from-teal-500 group-hover:to-teal-600'
         }`}>
           <svg 
-            className={`w-4 h-4 mr-2 transition-transform duration-300 ${
+            className={`w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 transition-transform duration-300 flex-shrink-0 ${
               isHovered ? 'rotate-12' : ''
             }`}
             fill="none" 
@@ -94,7 +94,7 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          <span>{date}</span>
+          <span className="truncate">{date}</span>
         </div>
       </div>
 

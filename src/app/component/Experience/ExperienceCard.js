@@ -54,16 +54,16 @@ const ExperienceCard = ({
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16">
+    <div className="relative flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-16">
       {/* Year label */}
-      <div className="flex md:w-28 pt-2 md:pt-6 text-left md:text-right items-center md:justify-end gap-2">
+      <div className="flex md:w-28 pt-2 md:pt-6 text-left md:text-right items-center md:justify-end gap-2 flex-shrink-0">
         <FontAwesomeIcon
           icon={faCalendarAlt}
-          className={`w-4 h-4 md:w-6 md:h-6 transition-colors duration-300 ${
+          className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-colors duration-300 flex-shrink-0 ${
             theme === 'light' ? 'text-blue-600' : 'text-teal-400'
           }`}
         />
-        <span className={`font-bold text-lg md:text-xl transition-colors duration-300 ${
+        <span className={`font-bold text-base sm:text-lg md:text-xl transition-colors duration-300 whitespace-nowrap ${
           theme === 'light' ? 'text-gray-900' : 'text-white'
         }`}>{year}</span>
       </div>
@@ -94,7 +94,7 @@ const ExperienceCard = ({
           ease: "easeOut"
         }}
       >
-        <div className={`rounded-xl p-5 sm:p-6 md:p-8 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ${
+        <div className={`rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ${
           theme === 'light'
             ? 'bg-white border-gray-200 hover:border-blue-400 hover:shadow-blue-200/50'
             : 'bg-gradient-to-br from-gray-900 to-black border-gray-800 hover:border-teal-500/60 hover:shadow-teal-500/10'
@@ -181,7 +181,7 @@ const ExperienceCard = ({
                     return (
                       <span
                         key={index}
-                        className={`px-3 md:px-4 py-1.5 md:py-2 border-2 rounded-lg text-xs md:text-sm font-medium flex items-center gap-2 hover:transform hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md ${
+                        className={`px-2.5 sm:px-3 md:px-4 py-1.5 md:py-2 border-2 rounded-lg text-xs sm:text-xs md:text-sm font-medium flex items-center gap-1.5 sm:gap-2 hover:transform hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md ${
                           theme === 'light'
                             ? 'bg-white border-blue-300 hover:border-blue-500 hover:bg-blue-50'
                             : 'bg-gray-800 border-gray-700 hover:border-teal-500 hover:bg-teal-500/20 hover:text-teal-300'
@@ -193,8 +193,8 @@ const ExperienceCard = ({
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        <FontAwesomeIcon icon={icon} className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                        {tech}
+                        <FontAwesomeIcon icon={icon} className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{tech}</span>
                       </span>
                     );
                   })}
@@ -223,27 +223,27 @@ const ExperienceCard = ({
                       <Link
                         key={index}
                         href={project.url}
-                        className={`px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 flex items-center gap-2 hover:translate-x-1 hover:scale-105 shadow-sm hover:shadow-md ${
+                        className={`px-3 sm:px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-xs sm:text-xs md:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:translate-x-1 hover:scale-105 shadow-sm hover:shadow-md min-h-[36px] sm:min-h-[40px] ${
                           theme === 'light'
                             ? 'bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100 hover:border-blue-400'
                             : 'bg-gray-800 text-sky-300 border border-gray-700 hover:text-white hover:bg-teal-500/20 hover:border-teal-500'
                         }`}
                         target="_blank"
                       >
-                        <FontAwesomeIcon icon={faLink} className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                        {project.name}
+                        <FontAwesomeIcon icon={faLink} className="w-3 h-3 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{project.name}</span>
                       </Link>
                     ) : (
                       <span
                         key={index}
-                        className={`px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-xs md:text-sm font-medium flex items-center gap-2 transition-all duration-300 hover:translate-x-1 cursor-pointer shadow-sm ${
+                        className={`px-3 sm:px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-xs sm:text-xs md:text-sm font-medium flex items-center gap-1.5 sm:gap-2 transition-all duration-300 hover:translate-x-1 cursor-pointer shadow-sm min-h-[36px] sm:min-h-[40px] ${
                           theme === 'light'
                             ? 'bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100'
                             : 'bg-gray-800 text-sky-300 border border-gray-700 hover:bg-teal-500/20'
                         }`}
                       >
-                        <FontAwesomeIcon icon={faLink} className="w-3 h-3 md:w-3.5 md:h-3.5 opacity-50" />
-                        {project.name}
+                        <FontAwesomeIcon icon={faLink} className="w-3 h-3 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 opacity-50 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{project.name}</span>
                       </span>
                     )
                   ))}

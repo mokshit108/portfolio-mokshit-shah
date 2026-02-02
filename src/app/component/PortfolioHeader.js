@@ -35,7 +35,7 @@ const PortfolioHeader = () => {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <div className={`min-h-screen relative overflow-hidden flex items-center py-12 sm:py-16 lg:py-20 transition-colors duration-300 ${
+    <div className={`min-h-screen relative overflow-x-hidden flex items-center py-12 sm:py-16 lg:py-20 transition-colors duration-300 w-full ${
       theme === 'light' ? 'bg-gradient-to-br from-white via-gray-50 to-white' : 'bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#1e3a8a]'
     }`}>
       {/* Background Image - only show in dark theme */}
@@ -74,7 +74,7 @@ const PortfolioHeader = () => {
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-acme transition-colors duration-300 ${
+              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-acme transition-colors duration-300 break-words ${
                 theme === 'light' ? 'text-gray-900' : 'text-white'
               }`}>
                 {personalInfo.name}
@@ -87,7 +87,7 @@ const PortfolioHeader = () => {
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-palanquin min-h-[40px] sm:min-h-[50px] transition-colors duration-300 ${
+              <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-palanquin min-h-[32px] sm:min-h-[40px] md:min-h-[50px] transition-colors duration-300 break-words ${
                 theme === 'light' ? 'text-blue-600' : 'text-sky-400'
               }`}>
                 <span className="mr-2 sm:mr-4">I'm</span>
@@ -107,7 +107,7 @@ const PortfolioHeader = () => {
           >
             {/* Profile Image */}
             <motion.div
-              className="flex-shrink-0 -mt-12 sm:-mt-16 lg:-mt-20"
+              className="flex-shrink-0 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ 
                 opacity: 1, 
@@ -124,11 +124,11 @@ const PortfolioHeader = () => {
                 }
               }}
             >
-              <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
                 <motion.img
                   src={personalInfo.profileImage.src}
                   alt={personalInfo.profileImage.alt}
-                  className="rounded-full object-cover m-4 sm:m-6 lg:m-10 shadow-lg ring-4 ring-blue-500"
+                  className="rounded-full object-cover m-2 sm:m-4 md:m-6 lg:m-10 shadow-lg ring-2 sm:ring-4 ring-blue-500"
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: false, margin: "-100px" }}
@@ -139,7 +139,7 @@ const PortfolioHeader = () => {
 
             {/* Social Media Icons */}
             <motion.div
-              className="flex items-center justify-center gap-5 sm:gap-6 mt-8 sm:mt-10 lg:mt-12 ml-14 sm:ml-16 lg:ml-18"
+              className="flex items-center justify-center gap-3 sm:gap-5 md:gap-6 mt-4 sm:mt-6 md:mt-8 lg:mt-12"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, margin: "-100px" }}
@@ -198,7 +198,7 @@ const PortfolioHeader = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="w-full -mt-4 sm:-mt-6 lg:-mt-8"
         >
-          <p className={`text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left ${
+          <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 sm:px-0 ${
             theme === 'light' ? 'text-gray-600' : 'text-gray-300'
           }`}>
             {personalInfo.description}
@@ -207,17 +207,17 @@ const PortfolioHeader = () => {
 
         {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 md:mt-6 -mt-2 sm:-mt-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4 md:mt-6 -mt-2 sm:-mt-4 px-2 sm:px-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <a
               href="/assets/Resume_MokshitShah.pdf"
               download
-              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold hover:from-teal-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px]"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -226,7 +226,7 @@ const PortfolioHeader = () => {
             </a>
             <a
               href="#contact"
-              className={`px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 ${
+              className={`px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 rounded-full font-semibold transition-all duration-300 text-center text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px] ${
                 theme === 'light' 
                   ? 'border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700' 
                   : 'border-sky-400 text-sky-400 hover:bg-sky-500/10 hover:border-sky-300'

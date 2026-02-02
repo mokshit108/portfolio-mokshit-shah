@@ -103,7 +103,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
 
         {/* Phone Number Text */}
         <div className="text-center mb-2 sm:mb-3 w-full px-2">
-          <span className={`text-xs sm:text-sm md:text-base font-semibold transition-colors duration-500 break-words ${
+          <span className={`text-xs sm:text-sm md:text-base font-semibold transition-colors duration-500 break-all sm:break-words ${
             isHovered
               ? 'text-white'
               : theme === 'light'
@@ -119,7 +119,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
           <a
             href={phoneHref}
             onClick={(e) => e.stopPropagation()}
-            className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-2.5 sm:py-2.5 md:py-2.5 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 active:scale-95 hover:scale-105 min-h-[44px] sm:min-h-0 ${
+            className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-2.5 sm:py-2.5 md:py-2.5 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 active:scale-95 hover:scale-105 min-h-[44px] ${
               isHovered
                 ? 'bg-white/20 text-white hover:bg-white/30'
                 : theme === 'light'
@@ -127,7 +127,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
                   : 'bg-gray-800 text-green-400 hover:bg-gray-700 active:bg-gray-600'
             }`}
           >
-            <FontAwesomeIcon icon={faPhone} className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+            <FontAwesomeIcon icon={faPhone} className="w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
             <span className="whitespace-nowrap">Call</span>
           </a>
           <a
@@ -135,7 +135,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-2.5 sm:py-2.5 md:py-2.5 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 active:scale-95 hover:scale-105 min-h-[44px] sm:min-h-0 ${
+            className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-2.5 sm:py-2.5 md:py-2.5 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 active:scale-95 hover:scale-105 min-h-[44px] ${
               isHovered
                 ? 'bg-white/20 text-white hover:bg-white/30'
                 : theme === 'light'
@@ -143,7 +143,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
                   : 'bg-gray-800 text-green-400 hover:bg-gray-700 active:bg-gray-600'
             }`}
           >
-            <FontAwesomeIcon icon={faWhatsapp} className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+            <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
             <span className="whitespace-nowrap">WhatsApp</span>
           </a>
         </div>
@@ -197,7 +197,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
 
       {/* Text */}
       <div className="text-center w-full px-2">
-        <span className={`text-xs sm:text-sm md:text-base font-semibold transition-colors duration-500 break-words ${
+        <span className={`text-xs sm:text-sm md:text-base font-semibold transition-colors duration-500 break-all sm:break-words ${
           isHovered
             ? 'text-white'
             : theme === 'light'

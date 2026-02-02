@@ -36,9 +36,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${acme.variable} ${palanquin.variable} ${inter.variable} ${robotoMono.variable} antialiased`}
+        className={`${acme.variable} ${palanquin.variable} ${inter.variable} ${robotoMono.variable} antialiased overflow-x-hidden`}
       >
         <ThemeProvider>
           {children}

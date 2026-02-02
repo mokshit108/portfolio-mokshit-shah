@@ -11,7 +11,7 @@ export default function Home() {
   const { theme } = useTheme();
   
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
+    <div className={`min-h-screen transition-colors duration-300 overflow-x-hidden w-full max-w-full ${
       theme === 'light' ? 'bg-white' : 'bg-[#1e3a8a]'
     }`}>
       <section id="home">

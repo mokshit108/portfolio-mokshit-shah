@@ -33,7 +33,7 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="fixed bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-4 sm:px-7 py-2 sm:py-3 z-20 rounded-full backdrop-blur-md gap-3 sm:gap-3">
+    <nav className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center bg-black/30 px-2 sm:px-4 md:px-7 py-2 sm:py-2.5 md:py-3 z-20 rounded-full backdrop-blur-md gap-1.5 sm:gap-2 md:gap-3 max-w-[95vw] sm:max-w-none overflow-x-auto">
       {navItems.map((item) => (
         <Link
           key={item.href}
@@ -41,13 +41,14 @@ const Navigation = () => {
           onClick={(e) => handleClick(e, item.href)}
           className={`
             relative group
-            p-3 sm:p-3.5 rounded-full text-gray-300
+            p-2.5 sm:p-3 md:p-3.5 rounded-full text-gray-300
             hover:bg-black/30 transition-colors duration-300
+            min-w-[44px] min-h-[44px] flex items-center justify-center
             ${activeSection === item.href ? 'bg-teal-500 text-white' : ''}
           `}
         >
-          <FontAwesomeIcon icon={item.icon} className="w-5 h-5 sm:w-5 sm:h-5" />
-          <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/75 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+          <FontAwesomeIcon icon={item.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="hidden sm:block absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/75 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
             {item.label}
           </span>
         </Link>
