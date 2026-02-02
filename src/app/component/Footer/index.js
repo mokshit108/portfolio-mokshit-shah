@@ -27,9 +27,10 @@ const FooterSection = () => {
           {/* Header */}
           <motion.div
             className="text-center mb-12 sm:mb-20"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
               <FontAwesomeIcon
@@ -59,24 +60,29 @@ const FooterSection = () => {
           {/* Contact Links */}
           <div className="w-full mb-12 sm:mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto px-4 sm:px-0">
-              {contactLinks.map((link, index) => (
-                <motion.div
-                  key={link.id}
-                  className="w-full flex justify-center md:justify-stretch"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.15,
-                    ease: "easeOut"
-                  }}
-                >
-                  <div className="w-full max-w-sm md:max-w-none">
-                    <ContactLink {...link} />
-                  </div>
-                </motion.div>
-              ))}
+              {contactLinks.map((link, index) => {
+                // Email (index 0): left to right, WhatsApp (index 1): right to left
+                const initialX = index === 0 ? -100 : 100;
+                
+                return (
+                  <motion.div
+                    key={link.id}
+                    className="w-full flex justify-center md:justify-stretch"
+                    initial={{ opacity: 0, x: initialX }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, margin: "-100px" }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.15,
+                      ease: "easeOut"
+                    }}
+                  >
+                    <div className="w-full max-w-sm md:max-w-none">
+                      <ContactLink {...link} />
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
 
