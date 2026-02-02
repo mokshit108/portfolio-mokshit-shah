@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
@@ -24,6 +25,8 @@ const ExperienceCard = ({
   technologies,
   projects,
   projectExplanations,
+  animationInitialX = 0,
+  animationDelay = 0,
 }) => {
   const year = period.split(" ").pop();
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -80,7 +83,17 @@ const ExperienceCard = ({
       </div>
 
       {/* Content card */}
-      <div className="flex-1">
+      <motion.div 
+        className="flex-1"
+        initial={{ opacity: 0, x: animationInitialX }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false, margin: "-100px" }}
+        transition={{
+          duration: 0.6,
+          delay: animationDelay,
+          ease: "easeOut"
+        }}
+      >
         <div className={`rounded-xl p-5 sm:p-6 md:p-8 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ${
           theme === 'light'
             ? 'bg-white border-gray-200 hover:border-blue-400 hover:shadow-blue-200/50'
@@ -296,7 +309,7 @@ const ExperienceCard = ({
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

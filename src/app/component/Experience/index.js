@@ -25,10 +25,10 @@ const ExperienceSection = () => {
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
             <FontAwesomeIcon
@@ -57,21 +57,20 @@ const ExperienceSection = () => {
 
         {/* Experience Cards */}
         <div className="relative">
-          {experienceData.experiences.map((experience, index) => (
-            <motion.div
-              key={experience.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-                ease: "easeOut"
-              }}
-            >
-              <ExperienceCard {...experience} />
-            </motion.div>
-          ))}
+          {experienceData.experiences.map((experience, index) => {
+            // Alternate animation direction: even index = left to right, odd index = right to left
+            const isEven = index % 2 === 0;
+            const initialX = isEven ? -100 : 100;
+            
+            return (
+              <ExperienceCard 
+                key={experience.id}
+                {...experience}
+                animationInitialX={initialX}
+                animationDelay={index * 0.1}
+              />
+            );
+          })}
         </div>
       </div>
     </motion.section>
