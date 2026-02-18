@@ -1,4 +1,5 @@
-'use client';
+ 'use client';
+import { useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +10,14 @@ import { useTheme } from '../../context/ThemeContext';
 const SkillsSection = () => {
   const { skills } = skillsData;
   const { theme } = useTheme();
+  const [isSmall, setIsSmall] = useState(false);
+
+  useLayoutEffect(() => {
+    const check = () => setIsSmall(typeof window !== 'undefined' && window.innerWidth <= 425);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   return (
     <motion.section
@@ -23,7 +32,7 @@ const SkillsSection = () => {
       viewport={{ once: false, margin: "-100px" }}
       transition={{ duration: 0.7 }}
     >
-      <div className="max-w-7xl mx-auto overflow-x-hidden">
+      <div className="max-w-7xl mx-auto overflow-x-visible px-0 sm:px-4 w-full max-w-full box-border">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 sm:mb-20"
@@ -58,16 +67,17 @@ const SkillsSection = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 sm:gap-3 md:gap-4 lg:gap-5">
+        <div className="w-full max-w-full box-border grid grid-cols-2 max-[425px]:grid-cols-2 items-stretch justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-2 gap-y-2 sm:gap-3 md:gap-4 lg:gap-5">
           {skills.map((skill, index) => (
             <motion.div
+              className="min-w-0 w-full col-span-1 flex flex-1"
               key={index}
-              initial={{ opacity: 0, x: -100, y: -100 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              initial={isSmall ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: -100, y: -100 }}
+              whileInView={isSmall ? { opacity: 1, x: 0, y: 0 } : { opacity: 1, x: 0, y: 0 }}
               viewport={{ once: false, margin: "-100px" }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.08,
+                duration: isSmall ? 0 : 0.6,
+                delay: isSmall ? 0 : index * 0.08,
                 ease: "easeOut"
               }}
             >

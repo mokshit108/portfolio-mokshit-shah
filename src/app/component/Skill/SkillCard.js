@@ -86,7 +86,7 @@ const SkillCard = ({ skill }) => {
 
   return (
     <div 
-      className={`group relative flex flex-col justify-center items-center gap-2 sm:gap-3 p-4 sm:p-5 md:p-6 rounded-xl border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${
+      className={`group relative w-full min-w-0 box-border flex-1 flex flex-col justify-center items-center gap-2 sm:gap-2 p-2 sm:p-3 md:p-4 rounded-xl border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 max-[425px]:transition-none max-[425px]:duration-0 max-[425px]:hover:shadow-none max-[425px]:hover:-translate-y-0 ${
         theme === 'light'
           ? 'bg-white border-gray-200 hover:border-blue-400 hover:shadow-blue-200/50'
           : 'bg-gradient-to-br from-gray-900 to-black border-gray-800 hover:border-teal-500/60 hover:shadow-teal-500/10'
@@ -95,7 +95,7 @@ const SkillCard = ({ skill }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Icon Container */}
-      <div className={`relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg transition-all duration-500 ${
+      <div className={`relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg transition-all duration-500 max-[425px]:transition-none ${
         isHovered
           ? theme === 'light'
             ? 'bg-blue-50'
@@ -106,7 +106,7 @@ const SkillCard = ({ skill }) => {
       }`}>
         {renderIcon()}
         {/* Pulse effect on hover */}
-        {isHovered && (
+        {isHovered && !(!typeof window === 'undefined' && window.innerWidth <= 425) && (
           <div className={`absolute inset-0 rounded-lg animate-pulse ${
             theme === 'light' ? 'bg-blue-200/30' : 'bg-teal-500/20'
           }`} />
@@ -115,7 +115,7 @@ const SkillCard = ({ skill }) => {
 
       {/* Skill Name */}
       <div className="text-center w-full">
-        <span className={`text-xs sm:text-sm md:text-base font-semibold transition-colors duration-500 ${
+        <span className={`text-xs sm:text-sm md:text-sm font-semibold transition-colors duration-500 whitespace-normal break-words max-[425px]:transition-none ${
           isHovered
             ? theme === 'light'
               ? 'text-blue-700'

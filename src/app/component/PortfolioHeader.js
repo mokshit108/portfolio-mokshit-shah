@@ -52,12 +52,12 @@ const PortfolioHeader = () => {
               zIndex: 0
             }}
           />
-          <div className="absolute inset-0 z-[1] bg-gradient-to-br from-black/60 via-black/50 to-black/60 overflow-hidden" />
+          
         </>
       )}
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full relative z-10 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full relative z-10">
         {/* Top Row: Left (Developer Info) and Right (Image) */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 mb-6 sm:mb-8 md:mb-12">
           {/* Left Content - Developer Info */}
