@@ -68,22 +68,35 @@ const SkillsSection = () => {
 
         {/* Skills Grid */}
         <div className="w-full max-w-full box-border grid grid-cols-2 max-[425px]:grid-cols-2 items-stretch justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-2 gap-y-2 sm:gap-3 md:gap-4 lg:gap-5">
-          {skills.map((skill, index) => (
-            <motion.div
-              className="min-w-0 w-full col-span-1 flex flex-1"
-              key={index}
-              initial={isSmall ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: -100, y: -100 }}
-              whileInView={isSmall ? { opacity: 1, x: 0, y: 0 } : { opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{
-                duration: isSmall ? 0 : 0.6,
-                delay: isSmall ? 0 : index * 0.08,
-                ease: "easeOut"
-              }}
-            >
-              <SkillCard skill={skill} />
-            </motion.div>
-          ))}
+          {skills.map((skill, index) => {
+            if (isSmall) {
+              return (
+                <div
+                  key={index}
+                  className="min-w-0 w-full col-span-1 flex flex-1"
+                >
+                  <SkillCard skill={skill} />
+                </div>
+              );
+            }
+
+            return (
+              <motion.div
+                className="min-w-0 w-full col-span-1 flex flex-1"
+                key={index}
+                initial={{ opacity: 0, x: -100, y: -100 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                  ease: "easeOut"
+                }}
+              >
+                <SkillCard skill={skill} />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </motion.section>
