@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import { useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,12 +19,14 @@ const SkillsSection = () => {
     return () => window.removeEventListener('resize', check);
   }, []);
 
+  const isOddTotal = skills.length % 2 !== 0;
+
   return (
     <motion.section
       id="skills"
       className={`py-8 min-[375px]:py-10 sm:py-12 md:py-20 px-3 min-[375px]:px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
-        theme === 'light' 
-          ? 'bg-gradient-to-b from-gray-50 to-white' 
+        theme === 'light'
+          ? 'bg-gradient-to-b from-gray-50 to-white'
           : 'bg-gradient-to-b from-[#000d1a] to-[#001a33]'
       }`}
       initial={{ opacity: 0 }}
@@ -49,8 +51,8 @@ const SkillsSection = () => {
               }`}
             />
             <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-palanquin transition-colors duration-300 ${
-              theme === 'light' 
-                ? 'bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent' 
+              theme === 'light'
+                ? 'bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent'
                 : 'bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent'
             }`}>
               Skills
@@ -67,15 +69,20 @@ const SkillsSection = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="w-full max-w-full box-border grid grid-cols-2 max-[425px]:grid-cols-2 items-stretch justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-2 gap-y-2 sm:gap-3 md:gap-4 lg:gap-5">
+        <div className="w-full max-w-full box-border grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-5">
           {skills.map((skill, index) => {
+            // On mobile, centre the last card if total is odd
+            const isLastOdd = isSmall && isOddTotal && index === skills.length - 1;
+
             if (isSmall) {
               return (
                 <div
                   key={index}
-                  className="min-w-0 w-full col-span-1 flex flex-1"
+                  className={`min-w-0 w-full flex ${isLastOdd ? 'col-span-2 justify-center' : 'col-span-1'}`}
                 >
-                  <SkillCard skill={skill} />
+                  <div className={isLastOdd ? 'w-1/2' : 'w-full flex'}>
+                    <SkillCard skill={skill} isMobile={true} />
+                  </div>
                 </div>
               );
             }
@@ -93,7 +100,7 @@ const SkillsSection = () => {
                   ease: "easeOut"
                 }}
               >
-                <SkillCard skill={skill} />
+                <SkillCard skill={skill} isMobile={false} />
               </motion.div>
             );
           })}
