@@ -14,7 +14,7 @@ import {
   SiNodedotjs,
   SiFlask,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiMysql
 } from 'react-icons/si';
 import { useTheme } from '../../context/ThemeContext';
@@ -41,8 +41,8 @@ const SkillCard = ({ skill, isMobile = false }) => {
       SiNodedotjs,
       SiFlask,
       SiHtml5,
-      // react-icons v5 renamed SiCss3 → SiCss; alias both keys
-      SiCss3: SiCss3,
+      SiCss3: SiCss,
+      SiCss,
       SiMysql
     };
     return reactIcons[reactIconName];
