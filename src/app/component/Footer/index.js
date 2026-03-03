@@ -22,7 +22,7 @@ const FooterSection = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="max-w-6xl mx-auto overflow-x-hidden">
+      <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center">
           {/* Header */}
           <motion.div
@@ -67,7 +67,7 @@ const FooterSection = () => {
                 return (
                   <motion.div
                     key={link.id}
-                    className="w-full flex justify-center md:justify-stretch overflow-x-hidden"
+                    className="w-full flex justify-center md:justify-stretch"
                     initial={{ opacity: 0, x: initialX }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: false, margin: "-100px" }}
@@ -77,7 +77,7 @@ const FooterSection = () => {
                       ease: "easeOut"
                     }}
                   >
-                    <div className="w-full max-w-sm md:max-w-none overflow-x-hidden">
+                    <div className="w-full max-w-sm md:max-w-none">
                       <ContactLink {...link} />
                     </div>
                   </motion.div>

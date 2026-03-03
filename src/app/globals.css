@@ -48,6 +48,16 @@ body {
   position: relative;
 }
 
+/* Hide default page scrollbars while keeping scroll functionality */
+html, body {
+  scrollbar-width: none;          /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, Edge */
+}
+
 /* Prevent horizontal scroll on all sections */
 section {
   overflow-x: hidden;
