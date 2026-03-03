@@ -50,16 +50,16 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
         case 'email':
           return theme === 'light' 
             ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
-            : 'bg-gradient-to-br from-teal-500 to-teal-600';
+            : 'bg-gradient-to-b from-teal-900 to-blue-950';
         case 'phone':
         case 'phone-whatsapp':
           return theme === 'light' 
             ? 'bg-gradient-to-br from-green-600 to-green-700' 
-            : 'bg-gradient-to-br from-green-500 to-green-600';
+            : 'bg-gradient-to-b from-teal-900 to-blue-950';
         case 'whatsapp':
           return theme === 'light' 
             ? 'bg-gradient-to-br from-green-600 to-green-700' 
-            : 'bg-gradient-to-br from-green-500 to-green-600';
+            : 'bg-gradient-to-b from-teal-900 to-blue-950';
         default:
           return theme === 'light' 
             ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
@@ -68,7 +68,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
     }
     return theme === 'light'
       ? 'bg-white border-2 border-gray-200'
-      : 'bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800';
+      : 'bg-gradient-to-b from-teal-900 to-blue-950 border-2 border-teal-800';
   };
 
   // If it's a combined phone-whatsapp card, render differently

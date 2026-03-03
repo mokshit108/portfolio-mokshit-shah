@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
       } ${
         theme === 'light'
           ? `bg-white border-gray-200 shadow-md ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-400`
-          : `bg-gradient-to-br from-teal-900 to-teal-800 border-teal-700 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-teal-500/60`
+          : `bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-900`
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -80,7 +80,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
 
       {/* Content */}
       <div className={`p-4 sm:p-5 md:p-6 transition-colors duration-300 ${
-        theme === 'light' ? 'bg-white' : 'bg-gradient-to-br from-gray-900 to-black'
+        theme === 'light' ? 'bg-white' : 'bg-gradient-to-b from-teal-900 to-blue-950'
       }`}>
         <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 transition-colors duration-300 break-words ${
           theme === 'light' ? 'text-gray-900' : 'text-white'
