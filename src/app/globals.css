@@ -19,10 +19,11 @@
   --foreground: #171717;
 }
 
-/* Dark theme */
+/* Dark theme - use a blue background to match cards */
 [data-theme="dark"] {
+  /* blue-900 provides a deep, readable dark background */
   --background: #1e3a8a;
-  --foreground: #ededed;
+  --foreground: #ededed; /* keep light text for contrast */
 }
 
 * {

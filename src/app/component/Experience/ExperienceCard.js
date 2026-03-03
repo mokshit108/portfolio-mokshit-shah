@@ -71,10 +71,10 @@ const ExperienceCard = ({
       {/* Timeline dot and line */}
       <div className="hidden md:flex relative flex-col items-center">
         <div className={`w-4 h-4 rounded-full mt-8 flex items-center justify-center transition-colors duration-300 ${
-          theme === 'light' ? 'bg-blue-400' : 'bg-teal-300'
+          theme === 'light' ? 'bg-blue-400' : 'bg-teal-500'
         }`}>
           <FontAwesomeIcon icon={faCircle} className={`w-2 h-2 transition-colors duration-300 ${
-            theme === 'light' ? 'text-blue-700' : 'text-teal-700'
+            theme === 'light' ? 'text-blue-700' : 'text-teal-300'
           }`} />
         </div>
         <div className={`w-0.5 h-full -mt-2 transition-colors duration-300 ${
@@ -97,14 +97,14 @@ const ExperienceCard = ({
         <div className={`rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ${
           theme === 'light'
             ? 'bg-white border-gray-200 hover:border-blue-400 hover:shadow-blue-200/50'
-            : 'bg-gradient-to-br from-gray-900 to-black border-gray-800 hover:border-teal-500/60 hover:shadow-teal-500/10'
+            : 'bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 hover:border-blue-900 hover:shadow-blue-900/30'
         }`}>
           <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-5 md:mb-6">
             <div className="flex items-start gap-3 md:gap-4">
               <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center transform transition-all duration-300 hover:rotate-12 hover:scale-110 shadow-md ${
                 theme === 'light'
                   ? 'bg-gradient-to-br from-blue-50 to-blue-100'
-                  : 'bg-gradient-to-br from-teal-500/20 to-teal-600/20'
+                  : 'bg-teal-700/20'
               }`}>
                 <FontAwesomeIcon
                   icon={faBuilding}
@@ -115,17 +115,17 @@ const ExperienceCard = ({
               </div>
               <div>
                 <h3 className={`font-bold text-xl md:text-2xl mb-2 transition-colors duration-300 ${
-                  theme === 'light' ? 'text-gray-900' : 'text-white'
+                  theme === 'light' ? 'text-gray-900' : 'text-teal-300'
                 }`}>{company}</h3>
                 <div className="flex items-center gap-2">
                   <FontAwesomeIcon
                     icon={faBriefcase}
                     className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-300 ${
-                      theme === 'light' ? 'text-blue-600' : 'text-cyan-300'
+                      theme === 'light' ? 'text-blue-600' : 'text-teal-300'
                     }`}
                   />
                   <p className={`font-md text-sm md:text-base transition-colors duration-300 ${
-                    theme === 'light' ? 'text-blue-600' : 'text-cyan-300'
+                    theme === 'light' ? 'text-blue-600' : 'text-teal-300'
                   }`}>{role}</p>
                 </div>
                 <div className="flex items-center gap-2 mt-1">
@@ -136,7 +136,7 @@ const ExperienceCard = ({
                     }`}
                   />
                   <p className={`font-normal text-xs md:text-sm transition-colors duration-300 ${
-                    theme === 'light' ? 'text-gray-600' : 'text-slate-400'
+                    theme === 'light' ? 'text-gray-600' : 'text-slate-300'
                   }`}>{period}</p>
                 </div>
               </div>

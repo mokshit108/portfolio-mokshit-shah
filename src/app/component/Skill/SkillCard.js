@@ -41,8 +41,7 @@ const SkillCard = ({ skill, isMobile = false }) => {
       SiNodedotjs,
       SiFlask,
       SiHtml5,
-      // alias both keys for backwards compatibility
-      SiCss3,
+      // react-icons v5 renamed SiCss3 → SiCss; alias both keys
       SiCss3: SiCss3,
       SiMysql
     };
@@ -88,7 +87,7 @@ const SkillCard = ({ skill, isMobile = false }) => {
       } ${
         theme === 'light'
           ? `bg-white border-gray-200 ${!isMobile ? 'hover:border-blue-400 hover:shadow-blue-200/50' : ''}`
-          : `bg-gradient-to-br from-gray-900 to-black border-gray-800 ${!isMobile ? 'hover:border-teal-500/60 hover:shadow-teal-500/10' : ''}`
+          : `bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 ${!isMobile ? 'hover:border-blue-900 hover:shadow-blue-900/30' : ''}`
       }`}
       onMouseEnter={() => { if (!isMobile) setIsHovered(true); }}
       onMouseLeave={() => { if (!isMobile) setIsHovered(false); }}

@@ -12,7 +12,7 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => {
       className={`group relative flex flex-col lg:flex-row items-start lg:items-center justify-between p-6 sm:p-8 rounded-xl border transition-all duration-500 gap-6 lg:gap-8 ${
         theme === 'light'
           ? 'bg-white border-gray-200 shadow-md hover:shadow-2xl hover:border-teal-400 hover:-translate-y-1'
-          : 'bg-gradient-to-br from-gray-900 to-black border-gray-800 shadow-lg hover:shadow-2xl hover:border-teal-500/60 hover:-translate-y-1'
+          : 'bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 shadow-lg hover:shadow-2xl hover:border-blue-900 hover:-translate-y-1'
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -52,7 +52,7 @@ const EducationCard = ({ logo, alt, schoolName, course, grade, date }) => {
           <h3 className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors duration-300 ${
             theme === 'light'
               ? 'text-gray-900 group-hover:text-teal-600'
-              : 'text-white group-hover:text-teal-400'
+              : 'text-teal-300 group-hover:text-teal-400'
           }`}>
             {schoolName}
           </h3>

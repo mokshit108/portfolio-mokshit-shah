@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
       } ${
         theme === 'light'
           ? `bg-white border-gray-200 shadow-md ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-400`
-          : `bg-gradient-to-br from-gray-900 to-black border-gray-800 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-teal-500/60`
+          : `bg-gradient-to-br from-teal-900 to-teal-800 border-teal-700 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-teal-500/60`
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
