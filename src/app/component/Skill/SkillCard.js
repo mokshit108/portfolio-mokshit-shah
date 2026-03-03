@@ -1,23 +1,25 @@
 'use client'
 import { useState } from 'react';
-import { 
-  SiTailwindcss, 
-  SiNextdotjs, 
-  SiRedux, 
-  SiTypescript, 
-  SiPostgresql, 
-  SiFastapi,
-  SiMui,
-  SiReact,
-  SiPython,
-  SiJavascript,
-  SiNodedotjs,
-  SiFlask,
-  SiHtml5,
-  SiCss3,
-  SiMysql
-} from 'react-icons/si';
 import { useTheme } from '../../context/ThemeContext';
+
+// Map reactIcon keys to Simple Icons CDN slugs
+const ICON_SLUG_MAP = {
+  SiReact:       'react',
+  SiPython:      'python',
+  SiJavascript:  'javascript',
+  SiTypescript:  'typescript',
+  SiNodedotjs:   'nodedotjs',
+  SiFlask:       'flask',
+  SiRedux:       'redux',
+  SiPostgresql:  'postgresql',
+  SiHtml5:       'html5',
+  SiCss3:        'css3',
+  SiTailwindcss: 'tailwindcss',
+  SiMysql:       'mysql',
+  SiNextdotjs:   'nextdotjs',
+  SiFastapi:     'fastapi',
+  SiMui:         'mui',
+};
 
 const SkillCard = ({ skill, isMobile = false }) => {
   const { theme } = useTheme();
@@ -26,52 +28,32 @@ const SkillCard = ({ skill, isMobile = false }) => {
   // On mobile, hover is never active
   const hovered = isMobile ? false : isHovered;
 
-  const getReactIcon = (reactIconName) => {
-    const reactIcons = {
-      SiTailwindcss,
-      SiNextdotjs,
-      SiRedux,
-      SiTypescript,
-      SiPostgresql,
-      SiFastapi,
-      SiMui,
-      SiReact,
-      SiPython,
-      SiJavascript,
-      SiNodedotjs,
-      SiFlask,
-      SiHtml5,
-      // react-icons exports SiCss3 for CSS icon
-      SiCss3,
-      SiMysql
-    };
-    return reactIcons[reactIconName];
-  };
-
   const renderIcon = () => {
-    const ReactIconComponent = getReactIcon(skill.reactIcon);
+    const slug = ICON_SLUG_MAP[skill.reactIcon];
 
     const darkThemeWhiteIcons = ['SiFlask', 'SiNextdotjs', 'SiMysql'];
     const shouldBeWhiteInDark = darkThemeWhiteIcons.includes(skill.reactIcon);
-    const iconColor = theme === 'dark' && shouldBeWhiteInDark ? '#FFFFFF' : skill.color;
+    const iconColor = theme === 'dark' && shouldBeWhiteInDark ? 'FFFFFF' : skill.color.replace('#', '');
 
-    if (ReactIconComponent) {
+    if (slug) {
       return (
-        <ReactIconComponent
+        <img
+          src={`https://cdn.simpleicons.org/${slug}/${iconColor}`}
+          alt={skill.title}
           className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
             !isMobile ? 'transition-all duration-500' : ''
           } ${!isMobile && hovered ? 'scale-110' : 'scale-100'}`}
-          style={{ color: iconColor }}
         />
       );
     }
 
+    // Fallback: first letter of skill name
     return (
       <div
         className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center ${
           !isMobile ? 'transition-all duration-500' : ''
         } ${!isMobile && hovered ? 'scale-110' : 'scale-100'}`}
-        style={{ color: iconColor }}
+        style={{ color: `#${iconColor}` }}
       >
         <span className="text-sm sm:text-base font-bold">{skill.title.charAt(0)}</span>
       </div>
