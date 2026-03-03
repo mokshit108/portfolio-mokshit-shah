@@ -139,7 +139,7 @@ const PortfolioHeader = () => {
 
             {/* Social Media Icons */}
             <motion.div
-              className="flex items-center justify-center gap-2 min-[375px]:gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-2 min-[375px]:mt-3 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-12"
+              className="flex items-center justify-center gap-2 min-[375px]:gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-2 min-[375px]:mt-3 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-12 ml-8 sm:ml-8 md:ml-24 py-2 sm:py-3"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, margin: "-100px" }}
