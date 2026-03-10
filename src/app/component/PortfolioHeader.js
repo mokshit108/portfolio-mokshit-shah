@@ -107,7 +107,7 @@ const PortfolioHeader = () => {
           >
             {/* Profile Image */}
             <motion.div
-              className="flex-shrink-0 -mt-4 min-[375px]:-mt-6 sm:-mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20"
+              className="flex-shrink-0 py-4 min-[375px]:py-0 -mt-0 min-[375px]:-mt-6 sm:-mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ 
                 opacity: 1, 
@@ -124,7 +124,7 @@ const PortfolioHeader = () => {
                 }
               }}
             >
-              <div className="w-24 h-24 min-[375px]:w-28 min-[375px]:h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56">
+              <div className="w-32 h-32 min-[375px]:w-36 min-[375px]:h-36 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56">
                 <motion.img
                   src={personalInfo.profileImage.src}
                   alt={personalInfo.profileImage.alt}
@@ -198,7 +198,12 @@ const PortfolioHeader = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="w-full -mt-4 sm:-mt-6 lg:-mt-8"
         >
-          <p className={`text-xs min-[375px]:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 min-[375px]:px-3 sm:px-0 ${
+          <p className={`text-xs min-[375px]:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 min-[375px]:px-3 sm:px-0 md:hidden ${
+            theme === 'light' ? 'text-gray-600' : 'text-gray-300'
+          }`}>
+            {personalInfo.descriptionMobile || personalInfo.description}
+          </p>
+          <p className={`text-xs min-[375px]:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed transition-colors duration-300 text-center md:text-left px-2 min-[375px]:px-3 sm:px-0 hidden md:block ${
             theme === 'light' ? 'text-gray-600' : 'text-gray-300'
           }`}>
             {personalInfo.description}
