@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
   faCode,
+  faStar,
   faBriefcase,
   faBook,
   faEnvelope,
@@ -17,6 +18,7 @@ const Navigation = () => {
   const navItems = [
     { href: '#home', icon: faHome, label: 'Home' },
     { href: '#about', icon: faCode, label: 'Skills' },
+    { href: '#unique-value', icon: faStar, label: 'Unique Value' },
     { href: '#experience', icon: faBriefcase, label: 'Experience' },
     { href: '#education', icon: faGraduationCap, label: 'Education' },
     { href: '#projects', icon: faBook, label: 'Projects' },

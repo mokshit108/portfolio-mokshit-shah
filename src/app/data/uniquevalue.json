@@ -1,0 +1,34 @@
+{
+  "uniqueValues": [
+    {
+      "title": "Business Model Expertise",
+      "description": "Navigating diverse business models: Currently leading product development at CerebralZip on CerebVision and Discovery projects. Previously delivered service-based solutions at AcceleratBSi with React applications. Enhanced finance portals at E-Revbay through strategic code implementations and system integrations.",
+      "icon": "globe"
+    },
+    {
+      "title": "Full-Stack Expertise",
+      "description": "Proficient in modern web technologies including React, Node.js, Python, enabling end-to-end solution development.",
+      "icon": "code"
+    },
+    {
+      "title": "Code Implementation & Deployment",
+      "description": "Applied code changes across multiple projects, from bug fixes and error handling to feature implementation and system integration in production environments.",
+      "icon": "cogs"
+    },
+    {
+      "title": "Entrepreneurial Mindset",
+      "description": "Built and launched OnestopBath, a full-stack e-commerce platform, demonstrating business acumen alongside technical skills.",
+      "icon": "rocket"
+    },
+    {
+      "title": "Technical Innovation",
+      "description": "Developed innovative solutions including automated PDF generation systems, interactive portfolio websites with advanced animations, and performance analytics dashboards for operational efficiency.",
+      "icon": "lightbulb"
+    },
+    {
+      "title": "Rapid Learning & Adaptation",
+      "description": "Quickly mastered new technologies and frameworks through internships and self-directed projects, staying ahead in the fast-evolving tech landscape.",
+      "icon": "bolt"
+    }
+  ]
+}

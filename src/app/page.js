@@ -1,6 +1,7 @@
 'use client'
 import PortfolioHeader from "./component/PortfolioHeader";
 import SkillsSection from "./component/Skill";
+import UniqueValueSection from "./component/UniqueValue";
 import ExperienceSection from "./component/Experience";
 import EducationSection from "./component/Education";
 import ProjectSection from "./component/Project";
@@ -21,7 +22,11 @@ export default function Home() {
       <section id="about" className="overflow-x-hidden max-w-full">
         <SkillsSection/>
       </section>
-      
+
+      <section id="unique-value" className="overflow-x-hidden max-w-full">
+        <UniqueValueSection/>
+      </section>
+
       <section id="experience" className="overflow-x-hidden max-w-full">
         <ExperienceSection/>
       </section>
