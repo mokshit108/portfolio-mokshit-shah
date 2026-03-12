@@ -12,13 +12,13 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
-      className={`group relative border rounded-xl overflow-hidden transition-all duration-500 ${
-        isHovered ? '-translate-y-6 scale-105' : 'translate-y-0 scale-100'
+    <div
+      className={`group relative border-2 rounded-xl overflow-hidden transition-all duration-500 ${
+        isHovered ? 'shadow-2xl -translate-y-2' : 'shadow-md translate-y-0'
       } ${
         theme === 'light'
-          ? `bg-white border-gray-200 shadow-md ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-400`
-          : `bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 shadow-lg ${isHovered ? 'shadow-2xl' : ''} hover:border-blue-900`
+          ? `bg-white border-gray-200 ${isHovered ? 'border-teal-400 shadow-teal-200/50' : ''}`
+          : `bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 ${isHovered ? 'border-teal-600 shadow-teal-900/30' : ''}`
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -40,14 +40,10 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
               : 'bg-gradient-to-t from-black/40 to-transparent'
         }`} />
         <div className={`absolute inset-0 transition-opacity duration-300 ${
-          isHovered 
-            ? 'opacity-100' 
+          isHovered
+            ? 'opacity-100'
             : 'opacity-0'
-        } ${
-          theme === 'light' 
-            ? 'bg-gradient-to-t from-blue-600/90 to-transparent' 
-            : 'bg-gradient-to-t from-teal-600/90 to-transparent'
-        }`} />
+        } bg-gradient-to-t from-teal-600/90 to-transparent`} />
         
         {/* Action Buttons Overlay */}
         <div className={`absolute inset-0 flex items-center justify-center gap-4 transition-opacity duration-300 ${
@@ -93,9 +89,7 @@ const ProjectCard = ({ title, description, techStack, liveLink, githubLink, imag
             <li key={index} className={`text-xs sm:text-sm md:text-base leading-relaxed flex gap-2 sm:gap-3 transition-colors duration-300 ${
               theme === 'light' ? 'text-gray-600' : 'text-gray-300'
             }`}>
-              <span className={`flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                theme === 'light' ? 'bg-blue-600' : 'bg-teal-500'
-              }`} />
+              <span className={`flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full transition-colors duration-300 bg-teal-500`} />
               <span className="flex-1 break-words">{desc}</span>
             </li>
           ))}

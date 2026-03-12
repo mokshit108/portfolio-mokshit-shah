@@ -30,41 +30,15 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
     if (isHovered) {
       return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
     }
-    switch (type) {
-      case 'email':
-        return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
-      case 'phone':
-      case 'phone-whatsapp':
-        return theme === 'light' ? 'text-green-600' : 'text-green-400';
-      case 'whatsapp':
-        return theme === 'light' ? 'text-green-600' : 'text-green-400';
-      default:
-        return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
-    }
+    return theme === 'light' ? 'text-teal-600' : 'text-teal-400';
   };
 
   // Get background gradient based on type
   const getBackgroundGradient = () => {
     if (isHovered) {
-      switch (type) {
-        case 'email':
-          return theme === 'light' 
-            ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
-            : 'bg-gradient-to-b from-teal-900 to-blue-950';
-        case 'phone':
-        case 'phone-whatsapp':
-          return theme === 'light' 
-            ? 'bg-gradient-to-br from-green-600 to-green-700' 
-            : 'bg-gradient-to-b from-teal-900 to-blue-950';
-        case 'whatsapp':
-          return theme === 'light' 
-            ? 'bg-gradient-to-br from-green-600 to-green-700' 
-            : 'bg-gradient-to-b from-teal-900 to-blue-950';
-        default:
-          return theme === 'light' 
-            ? 'bg-gradient-to-br from-teal-500 to-teal-600' 
-            : 'bg-gradient-to-br from-teal-500 to-teal-600';
-      }
+      return theme === 'light'
+        ? 'bg-gradient-to-br from-teal-500 to-teal-600'
+        : 'bg-gradient-to-b from-teal-900 to-blue-950';
     }
     return theme === 'light'
       ? 'bg-white border-2 border-gray-200'
@@ -153,7 +127,7 @@ const ContactLink = ({ href, phoneHref, whatsappHref, text, type }) => {
           isHovered
             ? 'opacity-100'
             : 'opacity-0'
-        } bg-gradient-to-r from-green-400 via-green-600 to-green-400`} />
+        } bg-gradient-to-r from-teal-400 via-teal-600 to-teal-400`} />
 
         {/* Shine effect on hover */}
         <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
