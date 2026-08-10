@@ -1,24 +1,25 @@
 'use client'
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
 
 // Map reactIcon keys to Simple Icons CDN slugs
 const ICON_SLUG_MAP = {
-  SiReact:       'react',
-  SiPython:      'python',
-  SiJavascript:  'javascript',
-  SiTypescript:  'typescript',
-  SiNodedotjs:   'nodedotjs',
-  SiFlask:       'flask',
-  SiRedux:       'redux',
-  SiPostgresql:  'postgresql',
-  SiHtml5:       'html5',
-  SiCss3:        'css3',
+  SiReact: 'react',
+  SiPython: 'python',
+  SiJavascript: 'javascript',
+  SiTypescript: 'typescript',
+  SiNodedotjs: 'nodedotjs',
+  SiFlask: 'flask',
+  SiRedux: 'redux',
+  SiPostgresql: 'postgresql',
+  SiHtml5: 'html5',
+  SiCss3: 'css3',
   SiTailwindcss: 'tailwindcss',
-  SiMysql:       'mysql',
-  SiNextdotjs:   'nextdotjs',
-  SiFastapi:     'fastapi',
-  SiMui:         'mui',
+  SiMysql: 'mysql',
+  SiNextdotjs: 'nextdotjs',
+  SiFastapi: 'fastapi',
+  SiMui: 'mui',
 };
 
 const SkillCard = ({ skill, isMobile = false }) => {
@@ -40,9 +41,7 @@ const SkillCard = ({ skill, isMobile = false }) => {
         <img
           src={`https://cdn.simpleicons.org/${slug}/${iconColor}`}
           alt={skill.title}
-          className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
-            !isMobile ? 'transition-all duration-500' : ''
-          } ${!isMobile && hovered ? 'scale-110' : 'scale-100'}`}
+          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
         />
       );
     }
@@ -50,9 +49,7 @@ const SkillCard = ({ skill, isMobile = false }) => {
     // Fallback: first letter of skill name
     return (
       <div
-        className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center ${
-          !isMobile ? 'transition-all duration-500' : ''
-        } ${!isMobile && hovered ? 'scale-110' : 'scale-100'}`}
+        className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center"
         style={{ color: `#${iconColor}` }}
       >
         <span className="text-sm sm:text-base font-bold">{skill.title.charAt(0)}</span>
@@ -61,71 +58,46 @@ const SkillCard = ({ skill, isMobile = false }) => {
   };
 
   return (
-    <div
-      className={`group relative w-full min-w-0 box-border flex-1 flex flex-col justify-center items-center gap-2 p-2 sm:p-3 md:p-4 rounded-xl border-2 ${
-        !isMobile
-          ? 'transition-all duration-500 hover:shadow-2xl hover:-translate-y-2'
-          : ''
-      } ${
-        theme === 'light'
-          ? `bg-white border-gray-200 ${!isMobile ? 'hover:border-blue-400 hover:shadow-blue-200/50' : ''}`
-          : `bg-gradient-to-b from-teal-900 to-blue-950 border-teal-800 ${!isMobile ? 'hover:border-blue-900 hover:shadow-blue-900/30' : ''}`
-      }`}
+    <motion.div
+      whileHover={!isMobile ? { scale: 1.05, translateY: -5 } : {}}
+      whileTap={isMobile ? { scale: 0.95 } : {}}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className={`group relative w-full h-full min-w-0 box-border flex-1 flex flex-col justify-center items-center gap-2 p-3 sm:p-4 md:p-5 rounded-2xl border border-solid transition-colors overflow-hidden ${theme === 'light'
+        ? `bg-white shadow-sm border-gray-200 ${!isMobile ? 'hover:shadow-md' : ''}`
+        : `bg-[#0a192f] shadow-none border-[#1e293b] ${!isMobile ? 'hover:shadow-lg' : ''}`
+        }`}
       onMouseEnter={() => { if (!isMobile) setIsHovered(true); }}
       onMouseLeave={() => { if (!isMobile) setIsHovered(false); }}
     >
       {/* Icon Container */}
-      <div className={`relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg ${
-        !isMobile ? 'transition-all duration-500' : ''
-      } ${
-        hovered
-          ? theme === 'light' ? 'bg-blue-50' : 'bg-gray-800'
-          : theme === 'light' ? 'bg-gray-50' : 'bg-gray-900'
-      }`}>
+      <motion.div
+        animate={{
+          rotate: hovered ? [0, -10, 10, -5, 5, 0] : 0,
+          scale: hovered ? 1.1 : 1
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className={`relative z-10 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl flex-shrink-0`}
+        style={{
+          backgroundColor: theme === 'light' ? `${skill.color}15` : `${skill.color}25`
+        }}
+      >
         {renderIcon()}
-
-        {/* Pulse effect — desktop only */}
-        {!isMobile && hovered && (
-          <div className={`absolute inset-0 rounded-lg animate-pulse ${
-            theme === 'light' ? 'bg-blue-200/30' : 'bg-teal-500/20'
-          }`} />
-        )}
-      </div>
+      </motion.div>
 
       {/* Skill Name */}
-      <div className="text-center w-full">
-        <span className={`text-xs sm:text-sm font-semibold whitespace-normal break-words ${
-          !isMobile ? 'transition-colors duration-500' : ''
-        } ${
-          hovered
-            ? theme === 'light' ? 'text-blue-700' : 'text-teal-400'
-            : theme === 'light' ? 'text-gray-900' : 'text-white'
-        }`}>
+      <div className="text-center w-full relative z-10">
+        <span className={`text-xs sm:text-sm font-medium whitespace-normal break-words tracking-wide antialiased ${theme === 'light' ? 'text-gray-700' : 'text-gray-200'
+          }`}>
           {skill.title}
         </span>
       </div>
 
-      {/* Decorative accent line — desktop only */}
-      {!isMobile && (
-        <div
-          className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-xl transition-all duration-500 ${
-            hovered ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            background: `linear-gradient(to right, ${skill.color}40, ${skill.color}, ${skill.color}40)`
-          }}
-        />
-      )}
-
-      {/* Shine effect — desktop only */}
-      {!isMobile && (
-        <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-          theme === 'light'
-            ? 'bg-gradient-to-r from-transparent via-white/10 to-transparent'
-            : 'bg-gradient-to-r from-transparent via-white/5 to-transparent'
-        }`} />
-      )}
-    </div>
+      {/* Decorative accent line */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl"
+        style={{ backgroundColor: skill.color }}
+      />
+    </motion.div>
   );
 };
 
