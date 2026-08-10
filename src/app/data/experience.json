@@ -15,7 +15,7 @@
         "Used React.js, Tailwind CSS, and video.js for seamless UI/UX and video rendering capabilities."
       ],
       "technologies": "React.js, Node.js, Typescript, TailwindCSS",
-       "projects": [
+      "projects": [
         {
           "name": "Bravo C2"
         },
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "company": "E-Revbay",
       "role": "Software Developer Intern",
       "period": "May 2023 - September 2023",
@@ -92,7 +92,7 @@
       "technologies": "React.js, Node.js, Express, Javascript, Mysql"
     },
     {
-      "id": 3,
+      "id": 4,
       "company": "CBIA",
       "role": "Application Developer Intern",
       "period": "Jan 2022 - June 2022",
@@ -106,22 +106,73 @@
     }
   ],
   "techIcons": {
-    "React.js": { "icon": "faReact", "color": "#04a3cf" },
-    "JavaScript": { "icon": "faJs", "color": "#deaa00" },
-    "HTML": { "icon": "faHtml5", "color": "#E34F26" },
-    "CSS": { "icon": "faCss3Alt", "color": "#1572B6" },
-    "Node.js": { "icon": "faNode", "color": "#339933" },
-    "Database": { "icon": "faDatabase", "color": "#336791" },
-    "API": { "icon": "faServer", "color": "#4CAF50" },
-    "Next.js": { "icon": "faNext", "color": "#000000" },
-    "Saas": { "icon": "faSass", "color": "#bf4080" },
-    "Jira": { "icon": "faJira", "color": "#0052CC" },
-    "C#": { "icon": "faMicrosoft", "color": "#512BD4" },
-    "ASP.NET": { "icon": "faMicrosoft", "color": "#512BD4" },
-    "MySQL": { "icon": "faMysql", "color": "#4479A1" },
-    "Express": { "icon": "faNode", "color": "#000000" },
-    "MVC": { "icon": "faCode", "color": "#68217A" },
-    "Entity Framework": { "icon": "faDatabase", "color": "#512BD4" },
-    "default": { "icon": "faCode", "color": "#6EE7B7" }
+    "React.js": {
+      "icon": "faReact",
+      "color": "#04a3cf"
+    },
+    "JavaScript": {
+      "icon": "faJs",
+      "color": "#deaa00"
+    },
+    "HTML": {
+      "icon": "faHtml5",
+      "color": "#E34F26"
+    },
+    "CSS": {
+      "icon": "faCss3Alt",
+      "color": "#1572B6"
+    },
+    "Node.js": {
+      "icon": "faNode",
+      "color": "#339933"
+    },
+    "Database": {
+      "icon": "faDatabase",
+      "color": "#336791"
+    },
+    "API": {
+      "icon": "faServer",
+      "color": "#4CAF50"
+    },
+    "Next.js": {
+      "icon": "faNext",
+      "color": "#000000"
+    },
+    "Saas": {
+      "icon": "faSass",
+      "color": "#bf4080"
+    },
+    "Jira": {
+      "icon": "faJira",
+      "color": "#0052CC"
+    },
+    "C#": {
+      "icon": "faMicrosoft",
+      "color": "#512BD4"
+    },
+    "ASP.NET": {
+      "icon": "faMicrosoft",
+      "color": "#512BD4"
+    },
+    "MySQL": {
+      "icon": "faMysql",
+      "color": "#4479A1"
+    },
+    "Express": {
+      "icon": "faNode",
+      "color": "#000000"
+    },
+    "MVC": {
+      "icon": "faCode",
+      "color": "#68217A"
+    },
+    "Entity Framework": {
+      "icon": "faDatabase",
+      "color": "#512BD4"
+    },
+    "default": {
+      "icon": "faCode",
+      "color": "#6EE7B7"
+    }
   }
 }
