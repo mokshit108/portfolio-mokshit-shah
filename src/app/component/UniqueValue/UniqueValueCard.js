@@ -19,19 +19,22 @@ const UniqueValueCard = ({ value, isMobile = false }) => {
   const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
-  const hovered = isMobile ? false : isHovered;
+  const hovered = isHovered;
 
   return (
     <motion.div
-      whileHover={!isMobile ? { scale: 1.02, translateY: -8 } : {}}
-      whileTap={isMobile ? { scale: 0.98 } : {}}
+      whileHover={{ scale: 1.02, translateY: -8 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`group relative w-full h-full min-w-0 box-border flex flex-col gap-4 p-5 sm:p-7 rounded-2xl border overflow-hidden ${theme === 'light'
-        ? `bg-white/80 backdrop-blur-sm border-teal-200 shadow-xl ${!isMobile ? 'hover:border-teal-300 hover:shadow-2xl' : ''}`
-        : `bg-[#0a192f] border-teal-500/20 shadow-xl ${!isMobile ? 'hover:border-teal-400/50 hover:shadow-[0_20px_40px_rgba(45,212,191,0.15)]' : ''}`
+        ? 'bg-white/80 backdrop-blur-sm border-teal-200 shadow-xl hover:border-teal-300 hover:shadow-2xl'
+        : 'bg-[#0a192f] border-teal-500/20 shadow-xl hover:border-teal-400/50 hover:shadow-[0_20px_40px_rgba(45,212,191,0.15)]'
         }`}
-      onMouseEnter={() => { if (!isMobile) setIsHovered(true); }}
-      onMouseLeave={() => { if (!isMobile) setIsHovered(false); }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
+      onTouchCancel={() => setIsHovered(false)}
     >
       {/* Background Gradient Blob (Permanently visible) */}
       <div
